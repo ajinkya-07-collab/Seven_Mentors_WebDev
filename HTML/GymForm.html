@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gym Membership Registration</title>
+  </head>
+
+  <body>
+    <h2>Gym Membership Registration</h2>
+
+    <form>
+      <label for="firstName">First Name</label>
+      <input
+        type="text"
+        name="firstName"
+        id="firstName"
+        placeholder="Enter first name"
+        required
+        autocomplete="off" />
+      <br /><br />
+
+      <label for="lastName">Last Name</label>
+      <input type="text" name="lastName" id="lastName" placeholder="Enter last name" />
+      <br /><br />
+
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" placeholder="Enter email" required />
+      <br /><br />
+
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" placeholder="Enter password" required />
+      <br /><br />
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" name="dob" id="dob" />
+      <br /><br />
+
+      <label for="address">Address</label>
+      <br />
+      <textarea
+        name="address"
+        id="address"
+        rows="5"
+        cols="30"
+        placeholder="Enter your address"></textarea>
+      <br /><br />
+
+      <label for="state">State</label>
+      <select name="state" id="state">
+        <option value="">Select State</option>
+        <option value="MH">Maharashtra</option>
+        <option value="GJ">Gujarat</option>
+        <option value="KA">Karnataka</option>
+        <option value="TN">Tamil Nadu</option>
+        <option value="DL">Delhi</option>
+      </select>
+      <br /><br />
+
+      <label for="duration">Membership Duration (Months)</label>
+      <input
+        type="number"
+        name="duration"
+        id="duration"
+        placeholder="Enter months"
+        min="1"
+        max="24" />
+      <br /><br />
+
+      <label for="joiningDate">Joining Date</label>
+      <input type="date" name="joiningDate" id="joiningDate" />
+      <br /><br />
+
+      <label for="file">Upload ID Proof</label>
+      <input type="file" name="file" id="file" />
+      <br /><br />
+
+      <label for="search">Search Trainer</label>
+      <input type="search" name="search" id="search" placeholder="Search trainer" />
+      <button type="button">Search</button>
+      <br /><br />
+
+      <button type="submit">Register</button>
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>

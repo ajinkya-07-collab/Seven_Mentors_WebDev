@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration</title>
+  </head>
+
+  <body>
+    <h2>Student Registration</h2>
+    <form>
+      <label for="firstName">FirstName</label>
+      <input
+        type="text"
+        name="firstName"
+        id="firstName"
+        class="firstName"
+        placeholder="Enter firstname here"
+        required
+        autocomplete="off" />
+      <br /><br />
+
+      <label for="lastName">LastName</label>
+      <input
+        type="text"
+        name="lastName"
+        id="lastNAme"
+        class="lastName"
+        placeholder="Enter firstname here" />
+      <input
+        type="text"
+        name="lastName"
+        id="lastName"
+        class="lastName"
+        value="@SevenMentor.com"
+        readonly />
+      <br /><br />
+
+      <label for="email">Email</label>
+      <input type="email" name="" id="email" class="email" placeholder="Enter Email" />
+      <br /><br />
+
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" placeholder="Enter Password" />
+      <br /><br />
+
+      <label for="address">Address</label>
+      <br />
+      <textarea name="address" id="address" rows="5" cols="15"> </textarea>
+      <br /><br />
+
+      <label for="quantity">Set Quantity</label>
+      <input
+        type="number"
+        name="number"
+        id="number"
+        class="email"
+        placeholder="Add Quantity"
+        min="1"
+        max="10" />
+      <br /><br />
+
+      <label for="file">Upload CV : </label>
+      <input type="file" name="" id="" />
+      <br /><br />
+
+      <input type="search" /><button>&num;</button> <br /><br />
+
+      <select name="state" id="state">
+        <option value="">Select State</option>
+        <option value="MH">Maharashtra</option>
+        <option value="UP">Uttar Pradesh</option>
+        <option value="GJ">Gujrat</option>
+        <option value="TN">Tamil Nadu</option>
+        <option value="JK">Jammu & Kashmir</option>
+      </select>
+      <br /><br />
+
+      <label for="dob">DOB</label>
+      <input type="date" name="" id="" />
+      <!--  only date -->
+      <input type="datetime" name="" id="" />
+      <!--  user value manual  -->
+      <input type="datetime-local" name="" id="" />
+      <!--  date & time -->
+      <br /><br />
+
+      <button type="submit">Register</button>
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>
