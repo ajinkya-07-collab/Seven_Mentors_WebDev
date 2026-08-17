@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ajinkya Temak — Software Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button class="explorer-toggle" id="explorerToggle" aria-label="Toggle file explorer">
+  <span></span><span></span><span></span>
+</button>
+
+<div class="app">
+
+  <!-- SIDEBAR: FILE EXPLORER -->
+  <aside class="explorer" id="explorer">
+    <div class="explorer-header">EXPLORER</div>
+    <div class="explorer-root">PORTFOLIO</div>
+
+    <nav class="file-tree">
+      <a href="#summary" class="file-item" data-target="summary">
+        <span class="file-icon icon-java">J</span> Summary.java
+      </a>
+      <a href="#skills" class="file-item" data-target="skills">
+        <span class="file-icon icon-json">{}</span> Skills.json
+      </a>
+      <a href="#education" class="file-item" data-target="education">
+        <span class="file-icon icon-sql">#</span> Education.sql
+      </a>
+      <a href="#experience" class="file-item" data-target="experience">
+        <span class="file-icon icon-dart">D</span> Experience.dart
+      </a>
+
+      <div class="folder">
+        <span class="folder-icon">▸</span> Projects
+      </div>
+      <a href="#projects" class="file-item file-item--nested" data-target="projects">
+        <span class="file-icon icon-java">J</span> TravelSync.dart
+      </a>
+      <a href="#projects" class="file-item file-item--nested" data-target="projects">
+        <span class="file-icon icon-java">J</span> LibraryMgmt.java
+      </a>
+
+      <a href="#certifications" class="file-item" data-target="certifications">
+        <span class="file-icon icon-md">M</span> Certifications.md
+      </a>
+      <a href="#contact" class="file-item" data-target="contact">
+        <span class="file-icon icon-json">@</span> Contact.sh
+      </a>
+    </nav>
+
+    <div class="explorer-footer">
+      <div class="git-branch">⎇ main</div>
+      <div class="explorer-socials">
+        <a href="mailto:ajinkyatemak88@gmail.com" title="Email">Mail</a>
+        <a href="https://github.com/ajinkya-07-collab" target="_blank" rel="noopener" title="GitHub">GitHub</a>
+        <a href="https://linkedin.com/in/ajinkya-temak-88306528a" target="_blank" rel="noopener" title="LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN EDITOR AREA -->
+  <main class="editor">
+
+    <!-- TAB BAR -->
+    <div class="tab-bar">
+      <div class="tab tab--active"><span class="file-icon icon-java">J</span>Summary.java</div>
+      <div class="tab-status">
+        <span class="status-dot"></span> No problems
+      </div>
+    </div>
+
+    <!-- HERO / SUMMARY -->
+    <section class="pane pane--hero" id="summary">
+      <div class="gutter" aria-hidden="true">
+        <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+        <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+      </div>
+      <div class="code">
+        <p class="line"><span class="tok-comment">/**</span></p>
+        <p class="line indent-1"><span class="tok-comment">&nbsp;* Computer Engineering graduate, 2026 — SPPU</span></p>
+        <p class="line indent-1"><span class="tok-comment">&nbsp;* Pune, Maharashtra, India</span></p>
+        <p class="line"><span class="tok-comment">&nbsp;*/</span></p>
+        <p class="line">
+          <span class="tok-keyword">public class</span>
+          <span class="tok-type">AjinkyaTemak</span>
+          <span class="tok-keyword">extends</span>
+          <span class="tok-type">Developer</span> {
+        </p>
+        <p class="line indent-1">
+          <span class="tok-type">String</span> role
+          <span class="tok-op">=</span>
+          <span class="typed-role"></span><span class="type-cursor">&nbsp;</span>
+        </p>
+        <p class="line indent-1">
+          <span class="tok-type">String</span> location
+          <span class="tok-op">=</span>
+          <span class="tok-string">"Pune, Maharashtra"</span><span class="tok-op">;</span>
+        </p>
+        <p class="line indent-1">
+          <span class="tok-type">boolean</span> openToWork
+          <span class="tok-op">=</span>
+          <span class="tok-keyword">true</span><span class="tok-op">;</span>
+        </p>
+        <p class="line">}</p>
+      </div>
+
+      <div class="terminal">
+        <div class="terminal-header">
+          <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+          <span class="terminal-title">bash — ajinkya@portfolio</span>
+        </div>
+        <div class="terminal-body" id="terminalBody">
+          <p><span class="prompt">$</span> javac AjinkyaTemak.java</p>
+          <p class="term-line-2"><span class="ok">✓ Build successful — 0 errors, 0 warnings</span></p>
+          <p class="term-line-3">Skilled in Core Java, OOP, Collections, Multithreading, Exception Handling,
+            SQL, DBMS and DSA. Built cross-platform mobile apps with Flutter, Dart and Firebase, with REST
+            API integration and JDBC connectivity. Seeking an entry-level Software Developer / Java Developer role.</p>
+        </div>
+      </div>
+
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn--primary">./view-projects</a>
+        <a href="#contact" class="btn btn--ghost">./get-in-touch</a>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="pane" id="skills">
+      <div class="pane-label"><span class="file-icon icon-json">{}</span> Skills.json</div>
+      <div class="skills-grid">
+
+        <div class="skill-card reveal">
+          <h3><span class="tok-string">"languages"</span></h3>
+          <div class="chip-row">
+            <span class="chip chip-orange">Java</span>
+            <span class="chip chip-teal">SQL</span>
+            <span class="chip chip-blue">Dart</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <h3><span class="tok-string">"frameworks"</span></h3>
+          <div class="chip-row">
+            <span class="chip chip-blue">Flutter</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <h3><span class="tok-string">"databases"</span></h3>
+          <div class="chip-row">
+            <span class="chip chip-teal">SQL</span>
+            <span class="chip chip-teal">DBMS</span>
+            <span class="chip chip-orange">JDBC</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <h3><span class="tok-string">"tools"</span></h3>
+          <div class="chip-row">
+            <span class="chip chip-violet">Git</span>
+            <span class="chip chip-violet">GitHub</span>
+            <span class="chip chip-violet">Linux</span>
+          </div>
+        </div>
+
+        <div class="skill-card skill-card--wide reveal">
+          <h3><span class="tok-string">"core_concepts"</span></h3>
+          <div class="chip-row">
+            <span class="chip">OOP</span>
+            <span class="chip">Collections</span>
+            <span class="chip">Multithreading</span>
+            <span class="chip">Exception Handling</span>
+            <span class="chip">Data Structures &amp; Algorithms</span>
+            <span class="chip">SDLC</span>
+            <span class="chip">Version Control</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="pane" id="education">
+      <div class="pane-label"><span class="file-icon icon-sql">#</span> Education.sql</div>
+      <p class="query-line reveal"><span class="tok-keyword">SELECT</span> degree, institution, score, years <span class="tok-keyword">FROM</span> education <span class="tok-keyword">ORDER BY</span> years <span class="tok-keyword">DESC</span>;</p>
+
+      <div class="sql-table reveal">
+        <div class="sql-row sql-row--head">
+          <span>degree</span><span>institution</span><span>score</span><span>years</span>
+        </div>
+        <div class="sql-row">
+          <span>B.E. — Computer Engineering</span><span>SPPU</span><span class="score">7.95 / 10</span><span>2022 – 2026</span>
+        </div>
+        <div class="sql-row">
+          <span>12th (HSC)</span><span>MSBSHSE</span><span class="score">91.33%</span><span>2021</span>
+        </div>
+        <div class="sql-row">
+          <span>10th</span><span>CBSE</span><span class="score">87.60%</span><span>2019</span>
+        </div>
+      </div>
+      <p class="query-result reveal">// 3 rows returned</p>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="pane" id="experience">
+      <div class="pane-label"><span class="file-icon icon-dart">D</span> Experience.dart</div>
+
+      <div class="exp-card reveal">
+        <div class="exp-head">
+          <h3>Flutter Developer Intern</h3>
+          <span class="exp-date">Jan 2025 – Feb 2025</span>
+        </div>
+        <div class="exp-company">Incubator Systems Pvt Ltd.</div>
+        <ul class="exp-list">
+          <li>Developed responsive, pixel-perfect UI screens from Figma designs using Flutter.</li>
+          <li>Built multiple reusable widgets and implemented clean, maintainable UI components.</li>
+          <li>Strengthened navigation, state management, API integration and local storage through hands-on development.</li>
+          <li>Gained practical experience in debugging and cross-platform application development.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="pane" id="projects">
+      <div class="pane-label"><span class="folder-icon">▸</span> Projects/</div>
+
+      <div class="project-grid">
+
+        <article class="project-card reveal">
+          <div class="project-card-head">
+            <span class="file-icon icon-dart">D</span>
+            <h3>TravelSync</h3>
+          </div>
+          <p class="project-sub">Travel Planning Mobile Application</p>
+          <div class="chip-row chip-row--small">
+            <span class="chip chip-blue">Flutter</span>
+            <span class="chip chip-blue">Dart</span>
+            <span class="chip chip-orange">Firebase</span>
+            <span class="chip">Shared Preferences</span>
+          </div>
+          <ul class="exp-list">
+            <li>Cross-platform app for collaborative trip planning with Firebase Authentication and cloud storage.</li>
+            <li>Real-time database so multiple users can co-plan trips simultaneously.</li>
+            <li>Shared Preferences for offline data access, improving app reliability.</li>
+          </ul>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-card-head">
+            <span class="file-icon icon-java">J</span>
+            <h3>Library Management System</h3>
+          </div>
+          <p class="project-sub">Console-Based Java Application</p>
+          <div class="chip-row chip-row--small">
+            <span class="chip chip-orange">Java</span>
+            <span class="chip">OOP</span>
+            <span class="chip">Collections</span>
+            <span class="chip chip-teal">JDBC</span>
+          </div>
+          <ul class="exp-list">
+            <li>Console-based system applying OOP principles — Inheritance, Encapsulation, Polymorphism.</li>
+            <li>Collections framework (ArrayList, HashMap) with JDBC connectivity to MySQL for CRUD operations.</li>
+            <li>Exception handling for invalid inputs, e.g. duplicate book ID, unavailable book.</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="pane" id="certifications">
+      <div class="pane-label"><span class="file-icon icon-md">M</span> Certifications.md</div>
+      <div class="cert-row reveal">
+        <div class="cert-card">
+          <span class="cert-check">✓</span>
+          <div>
+            <h3>Java Programming with DSA</h3>
+            <p>Core2Web</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="sub-heading reveal">Known Languages</h3>
+      <div class="chip-row reveal">
+        <span class="chip">English</span>
+        <span class="chip">Hindi</span>
+        <span class="chip">Marathi</span>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="pane pane--contact" id="contact">
+      <div class="pane-label"><span class="file-icon icon-json">@</span> Contact.sh</div>
+      <div class="contact-terminal reveal">
+        <p><span class="prompt">$</span> whoami</p>
+        <p class="ok">ajinkya_temak — aspiring software / java developer</p>
+        <p><span class="prompt">$</span> cat contact.txt</p>
+        <p>email:    <a href="mailto:ajinkyatemak88@gmail.com">ajinkyatemak88@gmail.com</a></p>
+        <p>phone:    <a href="tel:+919579785249">+91-9579785249</a></p>
+        <p>location: Pune, Maharashtra, India 411041</p>
+        <p>linkedin: <a href="https://linkedin.com/in/ajinkya-temak-88306528a" target="_blank" rel="noopener">linkedin.com/in/ajinkya-temak-88306528a</a></p>
+        <p>github:   <a href="https://github.com/ajinkya-07-collab" target="_blank" rel="noopener">github.com/ajinkya-07-collab</a></p>
+        <p><span class="prompt">$</span> <span class="type-cursor">&nbsp;</span></p>
+      </div>
+      <footer class="site-footer">Built by Ajinkya Temak · © 2026</footer>
+    </section>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
