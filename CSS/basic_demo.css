@@ -1,0 +1,50 @@
+/* universal selector */
+* {
+  background-color: lightslategray;
+  text-align: center;
+}
+/* element selector */
+h2 {
+  background-color: lightcoral;
+  text-align: center;
+}
+/* id selector */
+#welcome {
+  background-color: burlywood;
+}
+
+#time {
+  background-color: rgb(58, 23, 31);
+  color: aliceblue;
+}
+/* class selector */
+.para {
+  background-color: rgb(185, 231, 246);
+}
+.para1 {
+  background-color: blueviolet;
+  color: white;
+}
+#div2 {
+  background-color: rgb(180, 24, 149);
+  color: rgb(31, 35, 38);
+}
+/* group selector */
+.div22,
+.div23 {
+  background-color: aqua;
+}
+#mytable {
+  display: flex;
+}
+#mytable,
+#table1 {
+  width: 100%;
+  background-color: aqua;
+}
+
+#table1,
+#table1 th,
+#table1 td {
+  background-color: aqua;
+}
