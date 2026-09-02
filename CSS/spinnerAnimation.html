@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #bbb;
+        border-radius: 50%;
+        border-top: 5px solid black;
+
+        animation: spin 1s infinite linear;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .card {
+        width: 250px;
+        height: 350px;
+        background: lightcoral;
+
+        animation: cardZoom 1.5s infinite;
+      }
+      @keyframes cardZoom {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(0.5);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      img {
+        height: 300px;
+        width: 300px;
+        animation: imageDemo 3s infinite;
+        transition: transform 1s;
+      }
+      @keyframes imageDemo {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      img:hover {
+        animation: imgAn 1s;
+      }
+
+      @keyframes imgAn {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(0.5);
+        }
+      }
+
+      .btn {
+        padding: 15px 25px;
+        background: black;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        transition: transfrom 0.5s;
+      }
+      .btn:hover {
+        animation: buttonPulse 0.5s;
+      }
+
+      @keyframes buttonPulse {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(1.1);
+        }
+      }
+
+      .cards {
+        width: 150px;
+        height: 120px;
+        background-color: aqua;
+        opacity: 0;
+        animation: cardEntry 0.6s ease forwards;
+        animation-delay: 0.2s;
+      }
+
+      @keyframes cardEntry {
+        from {
+          opacity: 0;
+          transform: translateX(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      .cards:nth-child(1) {
+        animation-delay: 1s;
+      }
+      .cards:nth-child(2) {
+        animation-delay: 2s;
+      }
+      .cards:nth-child(3) {
+        animation-delay: 3s;
+      }
+      .cards:nth-child(4) {
+        animation-delay: 4s;
+      }
+      .cards:nth-child(5) {
+        animation-delay: 5s;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="display: flex; text-align: center">
+      <div class="cards">Card 1</div>
+      <div class="cards">Card 2</div>
+      <div class="cards">Card 3</div>
+      <div class="cards">Card 4</div>
+      <div class="cards">Card 5</div>
+    </div>
+    <hr />
+
+    <button class="btn">Buy Now</button>
+    <hr />
+    <div class="image">
+      <img src="../assets/Profile Icon Laptop.jpg" alt="" />
+    </div>
+    <hr />
+    <div class="card"></div>
+    <hr />
+    <div class="spinner"></div>
+  </body>
+</html>

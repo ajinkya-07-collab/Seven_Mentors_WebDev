@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li:nth-child(-n + 5) {
+        color: red;
+        font-weight: bold;
+      }
+      li:nth-child(n + 6):nth-child(-n + 15) {
+        color: green;
+        font-weight: bold;
+      }
+      /* li:nth-child(3n + 2) {
+        color: red;
+        background-color: aqua;
+      }
+      li:first-child {
+        font-family: cursive;
+        font-weight: bold;
+      }
+      li:last-child {
+        font-family: cursive;
+        font-weight: bold;
+      } */
+      div:nth-of-type(2) {
+        color: green;
+        font-weight: bold;
+        font-family: cursive;
+      }
+      p:first-of-type {
+        color: blue;
+        font-weight: bold;
+        font-family: cursive;
+      }
+      p:last-of-type {
+        color: blue;
+        font-weight: bold;
+        font-family: cursive;
+      }
+      p:nth-last-of-type(2) {
+        color: orange;
+        font-weight: bold;
+        font-family: cursive;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>Box 1</div>
+    <p>Paragraph 1</p>
+    <div>Box 2</div>
+    <p>Paragraph 2</p>
+    <div>Box 3</div>
+    <p>Paragraph 3</p>
+
+    <hr />
+
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Java</li>
+      <li>DotNet</li>
+      <li>Python</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Java</li>
+      <li>DotNet</li>
+      <li>Python</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Java</li>
+      <li>DotNet</li>
+      <li>Python</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Java</li>
+      <li>DotNet</li>
+      <li>Python</li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.navbar {
+  display: flex;
+  background-color: black;
+  padding: 15px 30px;
+}
+.logo {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+.menu {
+  padding: 5px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  margin-left: 25px;
+  /* padding: 25px; */
+}
+.menu a:hover {
+  color: rgb(230, 76, 76);
+}
+/* Services dropdown */
+.services {
+  margin-left: 25px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.services option {
+  background-color: white;
+  color: black;
+}
+
+.menu a:hover {
+  color: rgb(230, 76, 76);
+}

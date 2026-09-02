@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .p1 {
+        background-color: green !important;
+      }
+
+      #img1 {
+        width: 350px;
+        height: 350px;
+        /* filter: blur(5px); */
+        /* filter: brightness(150%); */
+        /* filter: contrast(50%); */
+        /* filter: grayscale(100%); */
+        /* filter: hue-rotate(180deg); */
+        /* filter: invert(100%); */
+        /* filter: opacity(0.5); */
+        /* filter: saturate(200%); */
+        /* filter: sepia(0.7); */
+      }
+      #img2 {
+        width: 350px;
+        height: 350px;
+        box-shadow:
+          5px 10px 20px rgb(56, 52, 52),
+          -5px -10px 20px rgb(201, 115, 115);
+      }
+      .h22 {
+        font-size: 20px;
+        text-shadow: 5px 5px 5px rgb(5, 5, 5);
+      }
+      .box {
+        width: 250px;
+        height: 100px;
+        border: 3px solid black;
+        /* overflow: visible; */
+        z-index: 2000;
+        position: relative;
+        overflow: scroll;
+      }
+      #div2 {
+        z-index: 1;
+        position: relative;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Overflow Example</h2>
+    <div class="box">
+      <h4>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+        consectetur exercitationem recusandae architecto accusantium cumque fuga
+        dolorum. Voluptatem, expedita itaque. Porro ducimus tempora saepe
+        molestiae debitis natus consectetur odit nemo?
+      </h4>
+    </div>
+    <div id="div2">
+      <img
+        id="img1"
+        src="https://images.unsplash.com/photo-1787583033648-e708b7241fe2?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1fHx8ZW58MHx8fHx8"
+        alt="" />
+      <img
+        id="img2"
+        src="https://images.unsplash.com/photo-1787583033648-e708b7241fe2?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1fHx8ZW58MHx8fHx8"
+        alt="" />
+    </div>
+
+    <div class="div1">
+      <p class="p1" style="background-color: yellow">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, tempore.
+      </p>
+      <h2 class="h22">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione tempore
+        alias omnis iste optio.
+      </h2>
+    </div>
+  </body>
+</html>
