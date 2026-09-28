@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <div>
+      <div class="odd:bg-pink-300 even:bg-blue-300 p-4">Row 1</div>
+      <div class="odd:bg-pink-300 even:bg-blue-300 p-4">Row 2</div>
+      <div class="odd:bg-pink-300 even:bg-blue-300 p-4">Row 3</div>
+      <div class="odd:bg-pink-300 even:bg-blue-300 p-4">Row 4</div>
+      <div class="odd:bg-pink-300 even:bg-blue-300 p-4">Row 5</div>
+      <div class="odd:bg-pink-300 even:bg-blue-300 p-4">Row 6</div>
+    </div>
+
+    <div class="space-y-2">
+      <p class="first:font-bold">First Item</p>
+      <p>Second Item</p>
+      <p class="last:text-red-600">Last Item</p>
+    </div>
+
+    <div class="border border-gary-300 focus-within:border-blue-500 rounded-lg p-3 mt-3">
+      <label for="email" class="block text-sm text-gray-600">Email</label>
+      <input type="email" class="w-full outline-none mt-1" placeholder="Enter Email" />
+    </div>
+
+    <div class="group overflow-hidden rounded-xl mt-3">
+      <img
+        src="https://picsum.photos/600/400"
+        alt="Image1"
+        class="w-full h-56 object-cover transition duration-300 group-hover:scale-105" />
+    </div>
+    <div class="group bg-gray-200 border-gray-400 rounded-xl p-6 hover:shadow-lg">
+      <h2 class="text-xl font-bold text-gray-900 group-hover:text-blue-600">Latest Laptops</h2>
+      <p class="text-gray-600 mt-2">High Performance Laptops</p>
+    </div>
+    <!-- Group -->
+    <div class="group">
+      <h2 class="group-hover:text-blue-600">Product</h2>
+      <p>Description</p>
+    </div>
+
+    <!-- Active -->
+    <button
+      class="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-5 py-2 rounded-lg m-3 cursor-wait">
+      Click Me!
+    </button>
+    <button
+      class="bg-blue-600 disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-5 py-2 rounded-lg m-3">
+      Click Me!
+    </button>
+
+    <!-- Focus -->
+    <input
+      type="text"
+      class="border border-gray-400 focus:border-red-600 focus:ring-2 focus:ring-blue-400 rounded-lg px-4 py-2 mt-10 ml-10"
+      placeholder="Enter Your Name" />
+
+    <input
+      type="text"
+      class="border border-gray-300 rounded-lg px-4 py-2 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+      placeholder="Enterr Here" />
+
+    <hr />
+
+    <!-- Hover -->
+    <button
+      class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-green-600 hover:font-bold hover:border-blue-500">
+      Save
+    </button>
+  </body>
+</html>

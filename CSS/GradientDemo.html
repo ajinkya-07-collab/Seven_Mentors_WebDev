@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .linear {
+        width: 100%;
+        height: 100px;
+        /* background-image: linear-gradient(orange, white, green); */
+        /* background-image: linear-gradient(
+          to bottom right,
+          orange,
+          white,
+          green
+        ); */
+        background-image: linear-gradient(
+          red 0%,
+          red 25%,
+          blue 25%,
+          blue 50%,
+          green 50%,
+          green 75%,
+          yellow 75%,
+          yellow 100%
+        );
+      }
+
+      .hero {
+        height: 500px;
+        background:
+          linear-gradient(rgba(249, 8, 8, 0.6), rgba(0, 0, 0, 0.2)),
+          url("../assets/Profile\ Icon\ Laptop.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .hero1 {
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #8e9ad1, #9462c7);
+      }
+
+      .hero1 h1 {
+        color: white;
+        font-size: 50px;
+      }
+
+      .box1 {
+        height: 300px;
+        background: radial-gradient(white, rgb(235, 235, 59), rgb(218, 87, 17));
+      }
+
+      .neon {
+        width: 400px;
+        height: 250px;
+        background: radial-gradient(circle, #00ffff, #006666, #001111);
+      }
+
+      .dashboardcard {
+        width: 300px;
+        height: 300px;
+        color: white;
+        border-radius: 15px;
+        background: radial-gradient(
+          circle at top right,
+          #4facfe,
+          #1e3c72,
+          #111827
+        );
+      }
+
+      .pie {
+        display: flex;
+        margin-left: 10px;
+      }
+
+      .box {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: conic-gradient(red, blue, green, yellow, red);
+      }
+
+      .box2 {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: conic-gradient(
+          red 0deg,
+          red 90deg,
+          yellow 90deg,
+          yellow 180deg,
+          green 180deg,
+          green 270deg,
+          blue 270deg,
+          blue 360deg
+        );
+        margin-left: 20px;
+      }
+      .box3 {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: repeating-conic-gradient(
+          red 0deg,
+          red 10deg,
+          yellow 10deg,
+          yellow 20deg,
+          blue 20deg,
+          blue 30deg
+        );
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pie">
+      <div class="box"></div>
+      <div class="box2"></div>
+      <div class="box3"></div>
+    </div>
+    <hr />
+    <div class="dashboardcard">
+      <h2>Sales</h2>
+      <p>₹1,25,000</p>
+    </div>
+    <hr />
+    <div class="neon"></div>
+    <hr />
+    <div class="box1"></div>
+    <hr />
+    <section class="hero1">
+      <h1>Welcome To Seven Mentors, Pune</h1>
+    </section>
+    <hr />
+    <div class="hero"></div>
+    <hr />
+    <div class="linear"></div>
+  </body>
+</html>

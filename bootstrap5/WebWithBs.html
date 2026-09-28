@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Edumanage</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+
+    <!-- Bootstrap Icons CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+
+    <!-- Bootstrap JavaScript CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <!-- Brand -->
+        <a href="#" class="navbar-brand">
+          <i class="bi bi-mortarboard-fill"></i>
+          Edumanage
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainnavbar"
+          aria-controls="mainnavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="mainnavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- Home -->
+            <li class="nav-item">
+              <a href="#home" class="nav-link active"> Home </a>
+            </li>
+
+            <!-- Courses -->
+            <li class="nav-item">
+              <a href="#courses" class="nav-link"> Courses </a>
+            </li>
+
+            <!-- Student -->
+            <li class="nav-item">
+              <a href="#student" class="nav-link"> Student </a>
+            </li>
+
+            <!-- drop dwon -->
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                role="button"
+                data-bs-toggle="dropdown"
+                >Management
+              </a>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#" class="dropdown-item">Teachers</a>
+                </li>
+                <li>
+                  <a href="#" class="dropdown-item">Attendance</a>
+                </li>
+                <li>
+                  <a href="#" class="dropdown-item">Reports</a>
+                </li>
+                <li class="dropdown-divider"></li>
+                <li>
+                  <a href="#" class="dropdown-item">Settings</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <!-- Search -->
+          <form action="" class="d-flex me-3">
+            <input
+              type="search"
+              class="form-control me-2"
+              placeholder="Search Here...." />
+            <button class="btn btn-outline-primary">
+              Search
+              <!-- <i class="bi bi-search"></i> -->
+            </button>
+          </form>
+
+          <button class="btn btn-primary me-3">
+            <i class="bi bi-person-circle"></i>Login
+          </button>
+
+          <button class="btn btn-primary">
+            <i class="bi bi-cart4"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- hero section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <h1>Student Management System</h1>
+            <p class="lead">
+              Manage Student, Courses, Attendance and Academic performance from
+              one place
+            </p>
+            <button
+              class="btn btn-warning btn-lg me-2"
+              data-bs-toggle="modal"
+              data-bs-target="#studentmodel">
+              <i class="bi bi-person-plus"></i>Add Student
+            </button>
+            <a href="#student" class="btn btn-outline-success btn-lg">View</a>
+          </div>
+
+          <div class="col-lg-5 text-center mt-4 mt-lg-0">
+            <i class="bi bi-mortarboard-fill" style="font-size: 180px"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <!-- student info -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card stat-card shadow-sm">
+              <div class="card-body bg-light">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <h5 class="text-muted">Total Students</h5>
+                    <h3>1540</h3>
+                  </div>
+                  <div class="stat-icon text-primary">
+                    <i class="bi bi-people-fill"></i>
+                  </div>
+                </div>
+                <span class="badge bg-success"> +12% this month </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- courses -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card stat-card shadow-sm">
+              <div class="card-body bg-light">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <h5 class="text-muted">Courses</h5>
+                    <h3>20</h3>
+                  </div>
+                  <div class="stat-icon text-primary">
+                    <i class="bi bi-book-fill"></i>
+                  </div>
+                </div>
+                <span class="badge bg-primary"> +2 this month </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- teachers -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card stat-card shadow-sm">
+              <div class="card-body bg-light">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <h5 class="text-muted">Teachers</h5>
+                    <h3>50</h3>
+                  </div>
+                  <div class="stat-icon text-primary">
+                    <i class="bi bi-person-workspace"></i>
+                  </div>
+                </div>
+                <span class="badge bg-warning"> 4 Department</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Attendance -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card stat-card shadow-sm">
+              <div class="card-body bg-light">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <h5 class="text-muted">Attendance</h5>
+                    <h3>95%</h3>
+                  </div>
+                  <div class="stat-icon text-primary">
+                    <i class="bi bi-calendar2-month-fill"></i>
+                  </div>
+                </div>
+                <span class="badge bg-danger">Excellent</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alert -->
+    <div class="container">
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Success!</strong>
+        Student Registration is currently Open
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"></button>
+      </div>
+    </div>
+
+    <!-- courses -->
+    <section id="courses" class="py-5">
+      <div class="container">
+        <h2 class="section-title">Popular Courses</h2>
+        <div class="row g-4">
+          <!-- Java -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card course-card shadow-sm">
+              <img
+                src="https://picsum.photos/500/300?random=1"
+                alt="img"
+                class="card-img top" />
+
+              <div class="card-body">
+                <span class="badge bg-primary mb-2">Programming</span>
+                <h5 class="card-title">Java FullStack</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+                  libero.
+                </p>
+                <div class="mb-3">
+                  <div class="d-flex justify-content-between">
+                    <small>Course Progress</small>
+                    <small>78%</small>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 78%">78%</div>
+                  </div>
+                </div>
+                <button class="btn btn-primary">View Course</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mern Stack -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card course-card shadow-sm">
+              <img
+                src="https://picsum.photos/500/300?random=2"
+                alt="img"
+                class="card-img top" />
+
+              <div class="card-body">
+                <span class="badge bg-primary mb-2">Web Development</span>
+                <h5 class="card-title">MERN Stack</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+                  libero.
+                </p>
+                <div class="mb-3">
+                  <div class="d-flex justify-content-between">
+                    <small>Course Progress</small>
+                    <small>52%</small>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 52%">52%</div>
+                  </div>
+                </div>
+                <button class="btn btn-primary">View Course</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- data Sceinec -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card course-card shadow-sm">
+              <img
+                src="https://picsum.photos/500/300?random=3"
+                alt="img"
+                class="card-img top" />
+
+              <div class="card-body">
+                <span class="badge bg-primary mb-2">Analytics</span>
+                <h5 class="card-title">Data Science</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+                  libero.
+                </p>
+                <div class="mb-3">
+                  <div class="d-flex justify-content-between">
+                    <small>Course Progress</small>
+                    <small>35%</small>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 35%">35%</div>
+                  </div>
+                </div>
+                <button class="btn btn-primary">View Course</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Table Section -->
+    <section class="py-5" id="students">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h2 class="section-title mb-0">Student List</h2>
+          <button
+            class="btn btm-primary"
+            data-bs-toggle="model"
+            data-bs-target="#studentmodel">
+            <i class="bi bi-plus-circle"></i>
+            Add Student
+          </button>
+        </div>
+
+        <!-- Serach Student -->
+        <div class="mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="studentSearch"
+            placeholder="Search Student by Name or Course ...." />
+        </div>
+
+        <!-- Table -->
+        <div class="table-responsive student-table shadow-sm">
+          <table class="table table-hover align-middle mb-0" id="studentTable">
+            <thead>
+              <tr>
+                <th>Sr.No</th>
+                <th>Student Name</th>
+                <th>Email</th>
+                <th>Course</th>
+                <th>Status</th>
+                <th>Attendance</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>
+                  <div class="d-flex align-item-center">
+                    <img
+                      src="https://i.pravatar.cc/100?img=1"
+                      alt="Rahul"
+                      class="profile-img me-3" />
+                    <strong>Rahul Kale</strong>
+                  </div>
+                </td>
+                <td>rahul@gmail.com</td>
+                <td>Java FullStack</td>
+                <td><span class="badge bg-success">Active</span></td>
+                <td>
+                  <div class="progress" style="width: 100px">
+                    <div class="progress-bar" style="width: 87%">87%</div>
+                  </div>
+                </td>
+                <td>
+                  <button class="btn btn-sm btn-outline-primary">
+                    <i class="bi bi-eye"></i>
+                  </button>
+                  <button class="btn btn-sm btn-outline-danger">
+                    <i class="bi bi-trash"></i>
+                  </button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>2</td>
+                <td>
+                  <div class="d-flex align-item-center">
+                    <img
+                      src="https://i.pravatar.cc/100?img=2"
+                      alt="Rahul"
+                      class="profile-img me-3" />
+                    <strong>Rahul Kale</strong>
+                  </div>
+                </td>
+                <td>rahul@gmail.com</td>
+                <td>Java FullStack</td>
+                <td><span class="badge bg-success">Active</span></td>
+                <td>
+                  <div class="progress" style="width: 100px">
+                    <div class="progress-bar" style="width: 87%">87%</div>
+                  </div>
+                </td>
+                <td>
+                  <button class="btn btn-sm btn-outline-primary">
+                    <i class="bi bi-eye"></i>
+                  </button>
+                  <button class="btn btn-sm btn-outline-danger">
+                    <i class="bi bi-trash"></i>
+                  </button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>3</td>
+                <td>
+                  <div class="d-flex align-item-center">
+                    <img
+                      src="https://i.pravatar.cc/100?img=3"
+                      alt="Rahul"
+                      class="profile-img me-3" />
+                    <strong>Rahul Kale</strong>
+                  </div>
+                </td>
+                <td>rahul@gmail.com</td>
+                <td>Java FullStack</td>
+                <td><span class="badge bg-success">Active</span></td>
+                <td>
+                  <div class="progress" style="width: 100px">
+                    <div class="progress-bar" style="width: 87%">87%</div>
+                  </div>
+                </td>
+                <td>
+                  <button class="btn btn-sm btn-outline-primary">
+                    <i class="bi bi-eye"></i>
+                  </button>
+                  <button class="btn btn-sm btn-outline-danger">
+                    <i class="bi bi-trash"></i>
+                  </button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>4</td>
+                <td>
+                  <div class="d-flex align-item-center">
+                    <img
+                      src="https://i.pravatar.cc/100?img=4"
+                      alt="Rahul"
+                      class="profile-img me-3" />
+                    <strong>Rahul Kale</strong>
+                  </div>
+                </td>
+                <td>rahul@gmail.com</td>
+                <td>Java FullStack</td>
+                <td><span class="badge bg-success">Active</span></td>
+                <td>
+                  <div class="progress" style="width: 100px">
+                    <div class="progress-bar" style="width: 87%">87%</div>
+                  </div>
+                </td>
+                <td>
+                  <button class="btn btn-sm btn-outline-primary">
+                    <i class="bi bi-eye"></i>
+                  </button>
+                  <button class="btn btn-sm btn-outline-danger">
+                    <i class="bi bi-trash"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Pagination -->
+        <nav class="mt-4">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+              <a href="#" class="page-link">Previous</a>
+            </li>
+            <li class="page-item active">
+              <a href="#" class="page-link">1</a>
+            </li>
+            <li class="page-item">
+              <a href="#" class="page-link">2</a>
+            </li>
+            <li class="page-item">
+              <a href="#" class="page-link">3</a>
+            </li>
+            <li class="page-item">
+              <a href="#" class="page-link">4</a>
+            </li>
+            <li class="page-item">
+              <a href="#" class="page-link">5</a>
+            </li>
+            <li class="page-item">
+              <a href="#" class="page-link">Next</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+  </body>
+</html>

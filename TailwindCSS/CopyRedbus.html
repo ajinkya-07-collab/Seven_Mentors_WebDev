@@ -1,0 +1,835 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>RedBus Clone</title>
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="bg-white text-gray-900">
+    <!-- ====================================================== -->
+    <!-- TOP OFFER BAR -->
+    <!-- ====================================================== -->
+
+    <div class="offer-bar h-20 flex items-center justify-center relative px-4">
+      <div class="flex items-center gap-4">
+        <div class="text-3xl text-red-500">
+          <i class="bi bi-phone"></i>
+        </div>
+
+        <p class="text-sm">
+          <span class="font-bold text-lg"> Get 10% Discount </span>
+
+          <span class="text-gray-600"> Use code APP10 on app </span>
+        </p>
+
+        <button class="bg-white px-7 py-3 rounded-full font-bold shadow-sm hover:shadow-md">
+          Install <span class="text-red-600">redBus</span> App
+        </button>
+      </div>
+
+      <button class="absolute right-8 text-3xl">
+        <i class="bi bi-x"></i>
+      </button>
+    </div>
+
+    <!-- ====================================================== -->
+    <!-- NAVBAR -->
+    <!-- ====================================================== -->
+
+    <nav class="sticky top-0 z-50 bg-white shadow-sm">
+      <div class="max-w-7xl mx-auto h-20 flex items-center justify-between px-4">
+        <!-- LEFT NAVIGATION -->
+
+        <div class="flex items-center gap-8 md:gap-12 h-full">
+          <!-- LOGO -->
+
+          <div class="flex items-center">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI5cLHl_eFPJyLbbvseIuQJnlzd7U_uohctNq3z7fS7A&s=10"
+              alt="redBus Logo"
+              class="w-16 h-16 object-contain" />
+          </div>
+
+          <!-- BUS TICKETS -->
+
+          <div class="nav-item active h-full flex flex-col items-center justify-center px-5">
+            <div class="text-2xl">
+              <a href="#"> 🚌 </a>
+            </div>
+
+            <span class="text-sm mt-1 font-semibold">
+              <a href="#"> Bus tickets </a>
+            </span>
+          </div>
+
+          <!-- TRAIN TICKETS -->
+
+          <div class="nav-item h-full flex flex-col items-center justify-center px-2">
+            <div class="text-2xl">
+              <a href="#"> 🚆 </a>
+            </div>
+
+            <span class="text-sm mt-1 font-semibold">
+              <a href="#"> Train tickets </a>
+            </span>
+          </div>
+
+          <!-- HOTELS -->
+
+          <div class="nav-item h-full flex flex-col items-center justify-center px-2">
+            <div class="text-2xl">
+              <a href="#"> 🏨 </a>
+            </div>
+
+            <span class="text-sm mt-1 font-semibold">
+              <a href="#"> Hotels </a>
+            </span>
+          </div>
+        </div>
+
+        <!-- RIGHT NAVIGATION -->
+
+        <div class="flex items-center gap-5 md:gap-10">
+          <div class="flex items-center gap-2">
+            <i class="bi bi-list text-2xl"></i>
+
+            <span class="text-sm hidden sm:inline"> Bookings </span>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <i class="bi bi-question-circle text-2xl"></i>
+
+            <span class="text-sm hidden sm:inline"> Help </span>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <i class="bi bi-person-circle text-2xl"></i>
+
+            <span class="text-sm hidden sm:inline"> Account </span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ====================================================== -->
+    <!-- HERO SECTION -->
+    <!-- ====================================================== -->
+
+    <section class="hero h-[340px] relative">
+      <!-- HERO HEADING -->
+
+      <div class="max-w-7xl mx-auto pt-20 px-4">
+        <h1 class="text-white text-4xl md:text-5xl font-bold leading-tight max-w-xl">
+          India's No.1 Online
+
+          <br />
+
+          bus ticket booking site
+        </h1>
+      </div>
+
+      <!-- ================================================== -->
+      <!-- BUS SEARCH BOX -->
+      <!-- ================================================== -->
+
+      <div
+        class="search-box absolute left-1/2 -translate-x-1/2 top-[260px] w-[90%] lg:w-[80%] bg-white rounded-3xl shadow-xl p-5">
+        <div class="search-fields flex items-center">
+          <!-- FROM -->
+
+          <div
+            class="search-field h-20 flex-1 border border-gray-300 rounded-l-2xl flex items-center px-5 gap-4">
+            <span class="text-2xl">
+              <i class="bi bi-bus-front"></i>
+            </span>
+
+            <div>
+              <p class="text-gray-500 text-sm">From</p>
+            </div>
+          </div>
+
+          <!-- TO -->
+
+          <div class="search-field h-20 flex-1 border border-gray-300 flex items-center px-5 gap-4">
+            <span class="text-2xl">
+              <i class="bi bi-bus-front"></i>
+            </span>
+
+            <div>
+              <p class="text-gray-500 text-sm">To</p>
+            </div>
+          </div>
+
+          <!-- DATE -->
+
+          <div class="search-date h-20 border border-gray-300 flex items-center gap-3 px-4">
+            <span class="text-2xl">
+              <i class="bi bi-calendar2"></i>
+            </span>
+
+            <div class="flex flex-col whitespace-nowrap">
+              <p class="text-gray-500 text-sm">Date of Journey</p>
+
+              <p class="font-bold text-lg">21 Sep, 2026</p>
+            </div>
+
+            <span class="text-gray-500 text-sm whitespace-nowrap hidden xl:inline"> (Today) </span>
+
+            <button class="bg-red-100 px-4 py-3 rounded-full font-semibold whitespace-nowrap">
+              Today
+            </button>
+
+            <button class="bg-red-100 px-4 py-3 rounded-full font-semibold whitespace-nowrap">
+              Tomorrow
+            </button>
+          </div>
+
+          <!-- WOMEN BOOKING -->
+
+          <div
+            class="women-booking h-20 border border-gray-300 rounded-2xl flex items-center justify-between px-4 ml-2">
+            <div class="flex items-center gap-2">
+              <span class="text-3xl"> 👩 </span>
+
+              <div>
+                <p class="text-sm whitespace-nowrap">Booking for women</p>
+
+                <a href="#" class="text-blue-600 underline text-sm"> Know more </a>
+              </div>
+            </div>
+
+            <!-- TOGGLE UI -->
+
+            <div class="w-12 h-7 bg-gray-200 rounded-full border-2 border-gray-500 p-1">
+              <div class="w-4 h-4 bg-gray-600 rounded-full"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEARCH BUTTON -->
+
+        <button
+          class="block mx-auto mt-5 bg-red-600 hover:bg-red-700 text-white font-bold text-base w-[300px] py-4 rounded-full">
+          <i class="bi bi-search"></i>
+
+          Search buses
+        </button>
+      </div>
+    </section>
+
+    <!-- ====================================================== -->
+    <!-- TRAIN BOOKING SECTION -->
+    <!-- ====================================================== -->
+
+    <section class="max-w-7xl mx-auto mt-36 px-4">
+      <!-- HEADING -->
+
+      <div class="flex items-center gap-4">
+        <div class="text-4xl">🚆</div>
+
+        <div>
+          <h2 class="text-2xl font-bold">Book trains for festivals</h2>
+
+          <p class="text-gray-500">Book now to get confirmed ticket</p>
+        </div>
+      </div>
+
+      <!-- TRAIN OFFER CARD -->
+
+      <div
+        class="bg-gray-50 rounded-3xl p-8 md:p-10 flex flex-col lg:flex-row mt-5 items-center justify-between gap-8">
+        <!-- LEFT SIDE -->
+
+        <div class="flex flex-col md:flex-row items-center gap-5">
+          <!-- DISCOUNT -->
+
+          <div>
+            <p>
+              Get
+
+              <span class="font-bold text-green-700"> ₹60 off </span>
+
+              using code
+
+              <span class="font-bold text-green-700"> SUPERB60 </span>
+            </p>
+          </div>
+
+          <!-- FESTIVAL MONTHS -->
+
+          <div class="flex gap-3">
+            <div class="border-2 border-pink-400 rounded-xl px-10 md:px-16 py-3 text-center">
+              <p class="font-bold">Oct</p>
+
+              <p class="text-pink-600 text-sm">Dussehra</p>
+            </div>
+
+            <div class="border-2 border-blue-500 rounded-xl px-10 md:px-16 py-3 text-center">
+              <p class="font-bold">Nov</p>
+
+              <p class="text-blue-500 text-sm">Diwali</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="flex flex-col gap-3">
+          <button class="bg-red-100 hover:bg-red-200 px-12 py-4 rounded-full font-bold">
+            Book trains now
+          </button>
+
+          <span class="text-gray-400 text-sm text-center"> Authorised IRCTC Partner </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================== -->
+    <!-- OFFERS SECTION -->
+    <!-- ====================================================== -->
+
+    <section class="max-w-7xl mx-auto mt-16 px-4">
+      <!-- HEADING -->
+
+      <div class="flex justify-between items-center mb-8">
+        <h2 class="text-2xl font-bold">Offers for you</h2>
+
+        <a href="#" class="text-blue-600 underline font-semibold"> View more </a>
+      </div>
+
+      <!-- OFFER CATEGORIES -->
+
+      <div class="flex gap-3 mb-5 overflow-x-auto">
+        <button class="bg-red-100 px-5 py-2 rounded-lg font-semibold text-sm">All</button>
+
+        <button class="border border-gray-300 px-5 py-2 rounded-lg text-sm">Bus</button>
+
+        <button class="border border-gray-300 px-5 py-2 rounded-lg text-sm">Train</button>
+
+        <button class="border border-gray-300 px-5 py-2 rounded-lg text-sm">Hotel</button>
+      </div>
+
+      <!-- OFFER CARDS -->
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- OFFER 1 -->
+
+        <div class="offer-card bg-orange-100 rounded-2xl p-5 h-52 flex flex-col justify-between">
+          <div>
+            <span class="bg-gray-600 text-white text-xs px-3 py-1 rounded-lg"> Bus </span>
+
+            <h3 class="font-bold text-medium mt-2">Save up to Rs 300 on bus tickets</h3>
+
+            <p class="text-xs mt-3">Valid till 23 Sep</p>
+          </div>
+
+          <div>
+            <span class="inline-block bg-white text-sm px-5 py-2 rounded-full font-bold">
+              <i class="bi bi-tag text-lg font-bold"></i>
+
+              FESTIVE300
+            </span>
+          </div>
+        </div>
+
+        <!-- OFFER 2 -->
+
+        <div class="offer-card bg-red-100 rounded-2xl p-5 h-52 flex flex-col justify-between">
+          <div>
+            <span class="bg-gray-600 text-white text-xs px-3 py-1 rounded-lg"> Bus </span>
+
+            <h3 class="font-bold text-medium mt-2">Save up to Rs 250 on bus tickets</h3>
+
+            <p class="text-xs mt-3">Valid till 30 Sep</p>
+          </div>
+
+          <div>
+            <span class="inline-block bg-white text-sm px-5 py-2 rounded-full font-bold">
+              <i class="bi bi-tag text-lg font-bold"></i>
+
+              FIRST
+            </span>
+          </div>
+        </div>
+
+        <!-- OFFER 3 -->
+
+        <div class="offer-card bg-red-100 rounded-2xl p-5 h-52 flex flex-col justify-between">
+          <div>
+            <span class="bg-gray-600 text-white text-xs px-3 py-1 rounded-lg"> Bus </span>
+
+            <h3 class="font-bold text-medium mt-2">Save up to Rs 300 on bus tickets</h3>
+
+            <p class="text-xs mt-3">Valid till 30 Sep</p>
+          </div>
+
+          <div>
+            <span class="inline-block text-sm bg-white px-5 py-2 rounded-full font-bold">
+              <i class="bi bi-tag text-lg font-bold"></i>
+
+              BUS300
+            </span>
+          </div>
+        </div>
+
+        <!-- OFFER 4 -->
+
+        <div class="offer-card bg-yellow-200 rounded-2xl p-5 h-52 flex flex-col justify-between">
+          <div>
+            <span class="bg-yellow-800 text-white text-xs px-3 py-1 rounded-lg"> Bus </span>
+
+            <h3 class="font-bold text-medium mt-2">Save up to Rs 200 on Prime operators.</h3>
+
+            <p class="text-xs mt-3">Valid till 30 Sep</p>
+          </div>
+
+          <div>
+            <span class="inline-block text-sm bg-white px-5 py-2 rounded-full font-bold">
+              <i class="bi bi-tag text-lg font-bold"></i>
+
+              PRIMODAY
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================== -->
+    <!-- WEEKEND GETAWAYS SECTION -->
+    <!-- ====================================================== -->
+
+    <section class="bg-gray-100 mt-10 py-10">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <!-- DESTINATION CARDS -->
+
+          <div class="flex justify-center items-center gap-2">
+            <!-- OOTY -->
+
+            <div class="destination-card bg-white rounded-xl shadow-md p-2 rotate-[-8deg]">
+              <div class="bg-green-200 w-20 sm:w-24 h-32 rounded-lg overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1708505116595-488b5cbf58d7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fG9vdHl8ZW58MHx8MHx8fDA%3D"
+                  alt="Ooty"
+                  class="w-full h-full object-cover" />
+              </div>
+
+              <p class="text-center text-sm mt-2">Ooty</p>
+            </div>
+
+            <!-- MYSURU -->
+
+            <div class="destination-card bg-white rounded-xl shadow-md p-2 rotate-[-3deg]">
+              <div
+                class="bg-orange-100 w-20 sm:w-24 h-36 rounded-lg flex items-center justify-center text-5xl overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1662206379030-4e7ff2a66b07?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fG15c3VydXxlbnwwfHwwfHx8MA%3D%3D"
+                  alt="Mysuru"
+                  class="w-full h-full object-cover" />
+              </div>
+
+              <p class="text-center text-sm mt-2">Mysuru</p>
+            </div>
+
+            <!-- KODAIKANAL -->
+
+            <div class="destination-card bg-white rounded-xl shadow-md p-2 rotate-[3deg]">
+              <div
+                class="bg-blue-200 w-20 sm:w-24 h-32 rounded-lg flex items-center justify-center text-5xl overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1619020933389-e96f49742bce?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8a29kYWlrYW5hbHxlbnwwfHwwfHx8MA%3D%3D"
+                  alt=""
+                  class="w-full h-full object-cover" />
+              </div>
+
+              <p class="text-center text-sm mt-2">Kodaikanal</p>
+            </div>
+
+            <!-- TIRUPATI -->
+
+            <div class="destination-card bg-white rounded-xl shadow-md p-2 rotate-[8deg]">
+              <div
+                class="bg-yellow-100 w-20 sm:w-24 h-36 rounded-lg flex items-center justify-center text-5xl overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1651383342546-d75227292d9a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fHRpcnVwYXRpfGVufDB8fDB8fHww"
+                  alt=""
+                  class="w-full h-full object-cover" />
+              </div>
+
+              <p class="text-center text-sm mt-2">Tirupati</p>
+            </div>
+          </div>
+
+          <!-- GETAWAY INFORMATION -->
+
+          <div>
+            <p class="text-red-500 text-sm">Introducing Getaways</p>
+
+            <h2 class="text-2xl md:text-3xl font-bold mt-2">Hey, ready for a weekend getaway?</h2>
+
+            <p class="text-gray-500 mt-2">Handpicked destinations for you</p>
+
+            <button class="bg-red-100 hover:bg-red-200 px-16 py-3 rounded-full font-bold mt-5">
+              Explore all
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================== -->
+    <!-- WHAT'S NEW SECTION -->
+    <!-- ====================================================== -->
+
+    <section class="max-w-7xl mx-auto mt-12 px-4">
+      <h2 class="text-2xl font-bold mb-8">What's new</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- CARD 1 -->
+
+        <!-- CARD 1 -->
+        <div class="rounded-2xl overflow-hidden shadow-md bg-purple-100 h-44 self-start">
+          <div class="bg-purple-100 p-5">
+            <h3 class="font-bold text-lg">Seamless Travel Protection</h3>
+
+            <p class="text-gray-500 text-sm mt-2">
+              Travel with peace of mind with travel protection benefits.
+            </p>
+
+            <a href="#" class="text-blue-600 font-semibold mt-4 inline-block"> Get Started → </a>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+
+        <!-- CARD 2: FREE CANCELLATION -->
+
+        <div class="rounded-2xl overflow-hidden shadow-md bg-pink-800 text-white h-44 self-start">
+          <div class="p-5">
+            <h3 class="font-bold text-lg">Free cancellation</h3>
+
+            <p class="mt-2 text-gray-200">Get 100% refund on cancellation</p>
+
+            <a href="#" class="mt-4 inline-block font-semibold"> Know more → </a>
+          </div>
+        </div>
+
+        <!-- CARD 3: BUS TIMETABLE -->
+
+        <div class="rounded-2xl overflow-hidden shadow-md bg-white border h-44 self-start">
+          <div class="bg-red-50 p-5">
+            <div class="text-lg">
+              <p class="font-bold">Introducing Bus timetable</p>
+            </div>
+
+            <p class="text-gray-500 text-sm mt-3">
+              Get local bus timings between cities in your state.
+            </p>
+
+            <a href="#" class="inline-block bg-red-100 px-6 py-2 rounded-full mt-4"> → </a>
+          </div>
+        </div>
+
+        <!-- CARD 4: FLEXITICKET -->
+
+        <div class="rounded-2xl overflow-hidden shadow-md bg-blue-100 h-44 self-start">
+          <div class="p-5">
+            <h3 class="text-lg font-bold text-blue-800">FlexiTicket</h3>
+
+            <p class="text-gray-600 mt-3">Get amazing benefits on date change and cancellation.</p>
+
+            <a href="#" class="text-blue-700 font-bold mt-4 inline-block"> Know More → </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================== -->
+    <!-- GOVERNMENT BUSES SECTION -->
+    <!-- ====================================================== -->
+
+    <section class="max-w-7xl mx-auto mt-16 px-4">
+      <h2 class="text-2xl font-bold mb-8">Government Buses</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- APSRTC -->
+
+        <div class="government-card border border-gray-200 rounded-2xl shadow-md overflow-hidden">
+          <div class="p-5">
+            <div class="flex items-center gap-2">
+              <div
+                class="w-14 h-14 rounded-full bg-orange-100 flex items-center justify-center text-3xl">
+                🚌
+              </div>
+
+              <div>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <h3 class="font-bold text-xl">APSRTC</h3>
+
+                  <span class="bg-green-700 text-white text-sm px-2 py-1 rounded-lg"> ★ 3.85 </span>
+                </div>
+
+                <!-- <p class="text-gray-500 text-sm">ఆంధ్రప్రదేశ్ రాష్ట్ర రోడ్డు రవాణా</p> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="border-t p-5">
+            <p class="text-center">1539 services including Garuda, Garuda Plus and more</p>
+
+            <div class="bg-gray-100 rounded-lg text-center py-2 mt-5 text-sm">
+              🚌 Official booking partner of APSRTC
+            </div>
+          </div>
+
+          <div class="bg-red-100 text-center py-4 font-semibold text-sm">
+            24*7 customer service (Call or chat)
+          </div>
+        </div>
+
+        <!-- TSRTC -->
+
+        <div class="government-card border border-gray-200 rounded-2xl shadow-md overflow-hidden">
+          <div class="p-5">
+            <div class="flex items-center gap-2">
+              <div
+                class="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center text-3xl">
+                🚌
+              </div>
+
+              <div>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <h3 class="font-bold text-xl">TSRTC</h3>
+
+                  <span class="bg-green-700 text-white text-sm px-2 py-1 rounded-lg"> ★ 3.71 </span>
+                </div>
+
+                <!-- <p class="text-gray-500 text-sm">Telangana State Road Transport</p> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="border-t p-5">
+            <p class="text-center">1450 services including Garuda Plus, Rajdhani and more</p>
+
+            <div class="bg-gray-100 rounded-lg text-center py-2 mt-5 text-sm">
+              🚌 Official booking partner of TSRTC
+            </div>
+          </div>
+
+          <div class="bg-red-100 text-center py-4 font-semibold text-sm">
+            24*7 customer service (Call or chat)
+          </div>
+        </div>
+
+        <!-- KERALA RTC -->
+
+        <div class="government-card border border-gray-200 rounded-2xl shadow-md overflow-hidden">
+          <div class="p-5">
+            <div class="flex items-center gap-2">
+              <div
+                class="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center text-3xl">
+                🚌
+              </div>
+
+              <div>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <h3 class="font-bold text-xl">KRTC</h3>
+
+                  <span class="bg-green-700 text-white text-sm px-2 py-1 rounded-lg"> ★ 3.85 </span>
+                </div>
+
+                <!-- <p class="text-gray-500 text-sm">Keralam-- State Road Transport</p> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="border-t p-5">
+            <p class="text-center">940 services including Swift, AC Multiaxle and more</p>
+
+            <div class="bg-gray-100 rounded-lg text-center py-2 mt-5 text-sm">
+              🚌 Official booking partner of KSRTC
+            </div>
+          </div>
+
+          <div class="bg-red-100 text-center py-4 font-semibold text-sm">
+            24*7 customer service (Call or chat)
+          </div>
+        </div>
+
+        <!-- KTCL -->
+
+        <div class="government-card border border-gray-200 rounded-2xl shadow-md overflow-hidden">
+          <div class="p-5">
+            <div class="flex items-center gap-2">
+              <div
+                class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center text-3xl">
+                🚌
+              </div>
+
+              <div>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <h3 class="font-bold text-xl">KTCL</h3>
+
+                  <span class="bg-green-700 text-white text-sm px-2 py-1 rounded-lg"> ★ 3.83 </span>
+                </div>
+
+                <!-- <p class="text-gray-500 text-sm">Kadamba Transport Corporation</p> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="border-t p-5">
+            <p class="text-center">60 services including Volvo Bus, AC & Non AC Bus and more</p>
+
+            <div class="bg-gray-100 rounded-lg text-center py-2 mt-5 text-sm">
+              🚌 Official booking partner of KTCL
+            </div>
+          </div>
+
+          <div class="bg-red-100 text-center py-4 font-semibold text-sm">
+            24*7 customer service (Call or chat)
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================== -->
+    <!-- TESTIMONIALS SECTION -->
+    <!-- ====================================================== -->
+
+    <section class="max-w-7xl mx-auto mt-16 px-2">
+      <h2 class="text-2xl font-bold">Testimonials</h2>
+
+      <p class="text-gray-500 mt-1">Hear from our satisfied customers in their own words</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-6">
+        <!-- TESTIMONIAL 1 -->
+
+        <div
+          class="testimonial-card border border-gray-200 rounded-2xl p-6 bg-gray-50 flex flex-col justify-between">
+          <p class="text-sm">Best on-time service with comfortable seats.</p>
+
+          <div>
+            <h3 class="text-sm font-bold">Amol Bodhare</h3>
+
+            <p class="text-gray-500 text-sm">redBus customer since 2015</p>
+          </div>
+        </div>
+
+        <!-- TESTIMONIAL 2 -->
+
+        <div
+          class="testimonial-card border border-gray-200 rounded-2xl p-6 bg-gray-50 flex flex-col justify-between">
+          <p class="text-sm">The driver was very good-natured.</p>
+
+          <div>
+            <h3 class="font-bold text-sm">Debaditya</h3>
+
+            <p class="text-gray-500 text-sm">redBus customer since 2018</p>
+          </div>
+        </div>
+
+        <!-- TESTIMONIAL 3 -->
+
+        <div
+          class="testimonial-card border border-gray-200 rounded-2xl p-6 bg-gray-50 flex flex-col justify-between">
+          <p class="text-sm">Bus was clean and the journey was smooth.</p>
+
+          <div>
+            <h3 class="font-bold text-sm">Sachin Bankar</h3>
+
+            <p class="text-gray-500 text-sm">redBus customer since 2016</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================== -->
+    <!-- DOWNLOAD APP SECTION -->
+    <!-- ====================================================== -->
+
+    <section class="max-w-7xl mx-auto mt-10 mb-10 px-4">
+      <div class="download-section relative overflow-hidden rounded-3xl text-white p-8 md:p-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <!-- LEFT CONTENT -->
+
+          <div>
+            <div class="flex items-center gap-3">
+              <span class="text-4xl"> 📱 </span>
+
+              <h2 class="text-3xl md:text-4xl font-bold">Grab 10% off now</h2>
+            </div>
+
+            <h3 class="text-2xl font-bold mt-4">Download App to unlock offer!</h3>
+
+            <p class="text-gray-300 mt-4">Book your bus tickets easily with the redBus app.</p>
+
+            <button class="bg-red-500 hover:bg-red-700 px-8 py-3 rounded-full font-bold mt-6">
+              Download App
+            </button>
+          </div>
+
+          <!-- RIGHT CONTENT -->
+
+          <div class="bg-gray-800 rounded-2xl p-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 items-center">
+              <!-- GOOGLE PLAY -->
+
+              <div>
+                <div class="bg-black border border-gray-500 rounded-xl p-4">
+                  <p class="text-sm">GET IT ON</p>
+
+                  <h3 class="text-xl font-semibold">
+                    <i class="bi bi-google-play"></i>
+
+                    Google Play
+                  </h3>
+                </div>
+
+                <p class="mt-3 text-lg font-bold">⭐ 4.6</p>
+
+                <p class="text-sm text-gray-300">10 crore+ Downloads</p>
+              </div>
+
+              <!-- APP STORE -->
+
+              <div>
+                <div class="bg-black border border-gray-500 rounded-xl p-4">
+                  <p class="text-sm">Download on the</p>
+
+                  <h3 class="text-xl font-semibold">
+                    <i class="bi bi-apple"></i>
+
+                    App Store
+                  </h3>
+                </div>
+
+                <p class="mt-3 text-lg font-bold">⭐ 4.7</p>
+
+                <p class="text-sm text-gray-300">1.5 crore+ Downloads</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================== -->
+    <!-- END OF LANDING PAGE -->
+    <!-- ====================================================== -->
+  </body>
+</html>

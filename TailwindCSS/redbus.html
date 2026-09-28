@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>RedBus Clone</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="bg-white text-gray-900">
+    <!-- ================= TOP OFFER ================= -->
+
+    <div class="offer-bar h-16 flex items-center justify-center relative">
+      <div class="flex items-center gap-4">
+        <div class="text-xl">
+          <img
+            src="../TailwindCSS/assets/Screenshot 2026-09-17 142036.png"
+            alt=""
+            style="height: 50px; width: 50px" />
+        </div>
+
+        <p class="text-sm">
+          <span class="font-bold">Get 10% Discount</span>
+          <span class="text-gray-600">Use code APP10 on app</span>
+        </p>
+
+        <button class="bg-white px-5 py-2 rounded-full font-bold text-medium shadow-sm">
+          Install <span class="text-red-600">redBus</span> App
+        </button>
+      </div>
+
+      <button class="absolute right-10 text-3xl"><i class="bi bi-x"></i></button>
+    </div>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="sticky top-0 z-50 h-20 bg-white shadow-sm flex items-center justify-between px-40">
+      <!-- Left navigation -->
+
+      <div class="flex items-center gap-12 h-full">
+        <!-- Logo -->
+
+        <div class="text-center">
+          <div>
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI5cLHl_eFPJyLbbvseIuQJnlzd7U_uohctNq3z7fS7A&s=10"
+              alt=""
+              style="height: 60px; width: 60px" />
+          </div>
+        </div>
+
+        <!-- Bus tickets -->
+
+        <div
+          class="h-full flex flex-col items-center justify-center px-5 border-b-4 border-red-500 text-red-500 font-semibold">
+          <div class="text-xl"><a href="#" class="" id="">🚌</a></div>
+
+          <span class="text-sm mt-1"> <a href="#" class="" id="">Bus tickets</a> </span>
+        </div>
+
+        <!-- Train -->
+
+        <div class="flex flex-col items-center justify-center font-semibold">
+          <div class="text-xl"><a href="#" class="" id="">🚆</a></div>
+
+          <span class="text-sm mt-1"><a href="#">Train tickets</a> </span>
+        </div>
+
+        <!-- Hotels -->
+
+        <div class="flex flex-col items-center justify-center">
+          <div class="text-xl"><a href="#" class="" id="">🏨</a></div>
+
+          <span class="text-sm mt-1 font-semibold"><a href="#">Hotels</a></span>
+        </div>
+      </div>
+
+      <!-- Right navigation -->
+
+      <div class="flex items-center gap-10">
+        <div class="flex items-center gap-2 text-lg">
+          <span class="text-sm"><i class="bi bi-list"></i></span>
+          <span class="text-sm">Bookings</span>
+        </div>
+
+        <div class="flex items-center gap-2 text-lg">
+          <span class="text-sm"><i class="bi bi-question-circle"></i></span>
+          <span class="text-sm">Help</span>
+        </div>
+
+        <div class="flex items-center gap-2 text-lg">
+          <span class="text-sm"><i class="bi bi-person-circle"></i></span>
+          <span class="text-sm">Account</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero h-[340px] relative">
+      <!-- Hero text -->
+
+      <div class="max-w-7xl mx-auto pt-20">
+        <h1 class="text-white text-5xl font-bold leading-tight w-[600px]">
+          India's No.1 Online
+          <br />
+          bus ticket booking site
+        </h1>
+      </div>
+
+      <!-- ================= SEARCH BOX ================= -->
+
+      <div
+        class="absolute left-1/2 -translate-x-1/2 top-[260px] w-[80%] bg-white rounded-3xl shadow-xl p-5">
+        <div class="flex items-center">
+          <!-- From -->
+
+          <a href="#" class="w-60"
+            ><div
+              class="h-20 flex-1 border border-gray-300 rounded-l-2xl flex items-center px-6 gap-4">
+              <span class="text-2xl">🚌</span>
+
+              <div>
+                <p class="text-gray-500 text-sm">From</p>
+              </div>
+            </div></a
+          >
+
+          <!-- To -->
+
+          <a href="#" class="w-60">
+            <div class="h-20 flex-1 border border-gray-300 flex items-center px-6 gap-4">
+              <span class="text-2xl">🚌</span>
+
+              <div>
+                <p class="text-gray-500 text-sm">To</p>
+              </div>
+            </div></a
+          >
+
+          <!-- Date -->
+
+          <div class="h-20 flex border border-gray-300 items-center gap-3 rounded-r-2xl px-4">
+            <span class="text-2xl shrink-0"><i class="bi bi-calendar2"></i></span>
+
+            <div class="flex items-center gap-2 shrink-0">
+              <div class="flex flex-col whitespace-nowrap">
+                <p class="text-gray-500 text-sm">Date of Journey</p>
+                <p class="font-bold">17 Sep, 2026</p>
+              </div>
+
+              <span class="text-gray-500 font-normal whitespace-nowrap"> (Today) </span>
+            </div>
+
+            <button class="bg-red-100 px-5 py-3 rounded-full font-semibold whitespace-nowrap">
+              Today
+            </button>
+
+            <button class="bg-red-100 px-5 py-3 rounded-full font-semibold whitespace-nowrap">
+              Tomorrow
+            </button>
+          </div>
+
+          <!-- Women booking -->
+
+          <div
+            class="h-20 w-[350px] border border-gray-300 rounded-2xl flex items-center justify-between px-4 ml-2">
+            <div class="flex items-center gap-2">
+              <span
+                ><img
+                  src="https://imgs.search.brave.com/Hz8kI2D0i2gYb8ZSI78NvvdegstgBsmNDIlWYmimXCs/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNDkv/MjM2LzQ0Mi9zbWFs/bC9wZW9wbGUtd29t/YW4taWNvbi1zeW1i/b2wtaWxsdXN0cmF0/aW9uLWlzb2xhdGVk/LW9uLXdoaXRlLWJh/Y2tncm91bmQtdmVj/dG9yLmpwZw"
+                  alt=""
+                  style="width: 80px; height: 70px"
+              /></span>
+
+              <div>
+                <p class="text-sm">Booking for women</p>
+
+                <a href="#" class="text-blue-600 underline"> Know more </a>
+              </div>
+            </div>
+
+            <div class="w-12 h-7 bg-gray-200 rounded-full border-2 border-gray-500 p-1">
+              <div class="w-4 h-4 bg-gray-600 rounded-full"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Search button -->
+
+        <button
+          class="block mx-auto mt-5 bg-red-500 hover:bg-red-700 text-white font-bold text-sm w-[300px] py-3 rounded-full">
+          <i class="bi bi-search"></i> Search buses
+        </button>
+      </div>
+    </section>
+
+    <!-- ================= TRAIN SECTION ================= -->
+
+    <section class="max-w-7xl mx-auto mt-36">
+      <div class="flex items-center gap-4">
+        <div class="text-3xl">🚆</div>
+
+        <div>
+          <h2 class="text-lg font-bold">Book trains for festivals</h2>
+
+          <p class="text-gray-500 text-sm">Book now to get confirmed ticket</p>
+        </div>
+      </div>
+
+      <!-- Offer Card -->
+
+      <div
+        class="bg-gray-50 rounded-3xl p-10 flex mt-5 items-center justify-center justify-between">
+        <div class="flex">
+          <div class="justify-center items-center mt-5">
+            <p class="text-sm">
+              Get
+              <span class="font-bold text-green-700"> ₹60 off </span>
+
+              using code
+
+              <span class="font-bold text-green-700"> SUPERB60 </span>
+            </p>
+          </div>
+
+          <div class="flex gap-2 items-center justify-center ml-2 text-sm">
+            <div class="border-2 border-pink-400 rounded-xl px-16 py-2 text-center">
+              <p class="font-bold">Oct</p>
+
+              <p class="text-pink-600 text-sm">Dussehra</p>
+            </div>
+
+            <div class="border-2 border-blue-500 rounded-xl px-16 py-2 text-center">
+              <p class="font-bold">Nov</p>
+
+              <p class="text-blue-500 text-sm">Diwali</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <button class="bg-red-100 px-16 py-3 rounded-full font-bold text-sm">
+            <div class="text-center">Book trains now</div>
+          </button>
+          <span class="text-gray-400 text-sm text-center">Authorised IRCTC Partner</span>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

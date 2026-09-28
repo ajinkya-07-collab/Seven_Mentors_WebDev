@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: lightcoral;
+      }
+
+      .container {
+        width: 80%;
+        margin: 100px auto;
+        padding: 40px;
+        background: white;
+        text-align: center;
+        border-radius: 10px;
+      }
+
+      /* Tablet & Mobile Responsive */
+      @media (max-width: 768px) {
+        body {
+          background-color: lightblue;
+          font-family: cursive;
+        }
+
+        .container {
+          width: 70%;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .navbar {
+        height: 70px;
+        padding: 0px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #222;
+        color: white;
+      }
+
+      .logo {
+        font-size: 25px;
+        font-weight: bold;
+      }
+
+      .nav-items {
+        display: flex;
+        gap: 30px;
+        font-size: 18px;
+        list-style: none;
+      }
+
+      .nav-items a {
+        color: white;
+        text-decoration: none;
+      }
+
+      /* Mobile */
+      @media (max-width: 768px) {
+        .navbar {
+          height: auto;
+          padding: 20px;
+          flex-direction: column;
+          gap: 20px;
+        }
+        .nav-items {
+          flex-direction: column;
+          text-align: center;
+          gap: 15px;
+        }
+      }
+
+      /* Card */
+
+      h1 {
+        text-align: center;
+      }
+
+      .courses {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+      }
+
+      .card {
+        background-color: wheat;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 2);
+      }
+
+      .card button {
+        padding: 10px 20px;
+        border: none;
+        background-color: #007bff;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+      }
+
+      /* tablet */
+      @media (max-width: 992px) {
+        .courses {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* mobile */
+      @media (max-width: 650px) {
+        body {
+          padding: 20px;
+        }
+        .courses {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">MyWebsite</div>
+
+      <ul class="nav-items">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Career</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Card Responsive -->
+    <h1>Our Courses</h1>
+    <div class="courses">
+      <div class="card">
+        <h2>Java FullStack</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores,
+          non!
+        </p>
+        <button>Learn More</button>
+      </div>
+
+      <div class="card">
+        <h2>Mern Stack</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores,
+          non!
+        </p>
+        <button>Learn More</button>
+      </div>
+
+      <div class="card">
+        <h2>Pyhton FullStack</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores,
+          non!
+        </p>
+        <button>Learn More</button>
+      </div>
+
+      <div class="card">
+        <h2>DotNet FullStack</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores,
+          non!
+        </p>
+        <button>Learn More</button>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Responsive WebPage Demo</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolorum
+        ab, dolore alias quam ipsam quidem maxime numquam reiciendis soluta
+        nihil officia architecto necessitatibus quos rem rerum, ducimus fugit
+        neque.
+      </p>
+    </div>
+  </body>
+</html>
