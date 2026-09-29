@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Welcome to Javascript Session!</h1>
+    <script>
+      var num1 = 100;
+      var num2 = 200;
+
+      var num3 = num1 + num2;
+
+      document.writeln("Addition of " + num1 + " and " + num2 + " is " + num3);
+      document.writeln(`Addition of ${num1} and ${num2} is ${num3} <br><br> `);
+
+      var id = 101;
+      var name = "Ajinkya";
+      var mNum = 9579785249;
+      var sal = 34464.43;
+      var future;
+      var status = null;
+
+      document.writeln(
+        `Name : ${name} <br> Id : ${id} <br> Mobile Number : ${mNum} <br> Salary : ${sal} <br> Future : ${future} <br> Status : ${status} <br><br>`,
+      );
+    </script>
+
+    <h1>Area Calculation</h1>
+
+    <script>
+      const PI = 3.14;
+      var sqSideLength = 4;
+      var rLength = 5;
+      var rBreadth = 10;
+      var radius = 6;
+
+      var circleArea = PI * radius * radius;
+      var sqaureArea = sqSideLength * sqSideLength;
+      var rectangleArea = rLength * rBreadth;
+      document.writeln(
+        `Area of Circle : ${circleArea} <br> Area of Square : ${sqaureArea} <br> Area of Rectangle : ${rectangleArea}`,
+      );
+    </script>
+  </body>
+</html>
