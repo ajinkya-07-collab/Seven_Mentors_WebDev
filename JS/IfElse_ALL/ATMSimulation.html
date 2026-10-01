@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <title>ATM Simulation</title>
+    </head>
+
+    <body>
+
+        <script>
+
+            let bankName = "SBI";
+            let accountType = "Savings";
+            let pinCode = 1234;
+            let balance = 25000;
+            let withDrawAmount = 15000;
+            let language = "Marathi";
+
+            if (bankName === "SBI") {
+
+                if (accountType === "Savings") {
+
+                    if (pinCode == "1234") {
+
+                        if (language === "English" || language === "Hindi" || language === "Marathi") {
+
+                            if (balance > withDrawAmount) {
+
+                                if (withDrawAmount % 100 === 0 && withDrawAmount <= 20000) {
+
+                                    console.log(`Bank Balance : ₹${balance}`);
+                                    console.log(`Withdrawal Amount : ₹${withDrawAmount}`);
+                                    console.log(`After Transaction : `);
+
+                                    balance -= withDrawAmount;
+
+                                    console.log(`Withdrawal Amount Process completed Successfully!!`);
+                                    console.log(`Collect Amount : ₹${withDrawAmount}`);
+                                    console.log(`Updated balance : ₹${balance}`);
+
+                                } else {
+
+                                    console.log(`Amount must be multiple of 100 and not greater than 20000!!`);
+
+                                }
+                            } else {
+                                console.log(`Withdraw Amount must be less than Balance !!`)
+                            }
+                        } else {
+                            console.log(`Check Language .....!!!`)
+                        }
+
+                    } else {
+                        console.log(`Please Check the Pin!`)
+                    }
+
+                } else {
+                    console.log(`Account Type must be a Savings Account `);
+                }
+
+            } else {
+                console.log(`Please Check the Bank Name!!`);
+            }
+
+        </script>
+
+    </body>
+
+</html>

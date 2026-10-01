@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <title>Train Ticket Reservation</title>
+    </head>
+
+    <body>
+
+        <script>
+
+            let railway = "Indian Railways";
+            let journeyType = "Express";
+            let passengerAge = 22;
+            let availableBerths = 8;
+            let requiredBerths = 2;
+            let coach = "Sleeper";
+            let fare = 450;
+            let amountPaid = 900;
+
+
+            if (railway === "Indian Railways") {
+
+                if (journeyType === "Express" || journeyType === "Superfast") {
+
+                    if (passengerAge >= 5) {
+
+                        if (coach === "Sleeper" || coach === "AC") {
+
+                            if (requiredBerths <= availableBerths) {
+
+                                if (requiredBerths > 0 && requiredBerths <= 6) {
+
+                                    if (amountPaid >= fare * requiredBerths) {
+
+                                        console.log(`Railway : ${railway}`);
+                                        console.log(`Journey Type : ${journeyType}`);
+                                        console.log(`Passenger Age : ${passengerAge}`);
+                                        console.log(`Coach : ${coach}`);
+                                        console.log(`Berths Required : ${requiredBerths}`);
+                                        console.log(`Fare Per Ticket : ₹${fare}`);
+
+                                        availableBerths -= requiredBerths;
+
+                                        console.log(`Total Fare : ₹${fare * requiredBerths}`);
+                                        console.log(`Payment Received : ₹${amountPaid}`);
+                                        console.log(`Train Ticket Booked Successfully!!`);
+                                        console.log(`Remaining Berths : ${availableBerths}`);
+
+                                    } else {
+
+                                        console.log(`Insufficient Amount for Ticket Booking!!`);
+
+                                    }
+
+                                } else {
+
+                                    console.log(`You can reserve maximum 6 berths at once!!`);
+
+                                }
+
+                            } else {
+
+                                console.log(`Required Berths are not available!!`);
+
+                            }
+
+                        } else {
+
+                            console.log(`Please select a valid coach!!`);
+
+                        }
+
+                    } else {
+
+                        console.log(`Passenger below 5 years does not require this booking option!!`);
+
+                    }
+
+                } else {
+
+                    console.log(`Please select a valid train type!!`);
+
+                }
+
+            } else {
+
+                console.log(`Please check the Railway Name!!`);
+
+            }
+
+        </script>
+
+    </body>
+
+</html>

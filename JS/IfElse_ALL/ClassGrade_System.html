@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <title>Class_Grade_System</title>
+    </head>
+
+    <body>
+
+        <script>
+
+            var percentage = Number.parseFloat(prompt(`Enter Percentage To check Class !!`));
+
+            if (percentage < 100 && percentage > 0) {
+
+                if (percentage >= 75 && percentage <= 100) {
+                    console.log(`Congratulations ! Student passed with Distinction!!`);
+                } else if (percentage >= 60 && percentage <= 74.99) {
+                    console.log(`Congratulations ! Student passed with First Class!!`);
+                } else if (percentage >= 45 && percentage <= 59.99) {
+                    console.log(`Congratulations ! Student passed with Second Class!!`);
+                } else if (percentage >= 35 && percentage <= 44.99) {
+                    console.log(`Congratulations ! Student passed with Third Class!!`);
+                } else {
+                    console.log(`Student Failed ! Better Luck Next Time!!`);
+                }
+
+            } else {
+                console.log(`Invalid Marks Percentage. Please enter it in range 0 to 100!!`);
+            }
+        </script>
+    </body>
+
+</html>
