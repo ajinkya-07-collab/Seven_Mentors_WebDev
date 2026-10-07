@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+        <script>
+
+            let PA = 50000;
+            let ROI = 6.25;
+            let time = 4.5;
+
+            var interest = 0;
+
+            const calculateInterest = () => {
+                interest = (PA * ROI * time) / 100;
+
+                return interest;
+            }
+
+            const totalMaturityAmmount = () => {
+
+                let maturityAmmount = PA + calculateInterest();
+                console.log(`Total Maturity Ammount with interest : ${maturityAmmount} `);
+
+            }
+
+            totalMaturityAmmount();
+        </script>
+    </body>
+
+</html>

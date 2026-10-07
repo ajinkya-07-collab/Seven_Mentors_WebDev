@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <title>Shopping Cart</title>
+    </head>
+
+    <body>
+
+        <script>
+
+
+            function productInfo() {
+
+                let productName = "Laptop";
+                let productPrice = 25000;
+
+                return productPrice;
+            }
+
+            function cart() {
+
+                let quantity = 4;
+                let total = productInfo() * quantity;
+
+                return total;
+            }
+
+            function checkOut() {
+
+                let gst = (cart() * 2.5) / 100;
+
+                let grandTotal = cart() + gst;
+
+                return grandTotal;
+            }
+
+            function paymentGateway() {
+                console.log(`Grand Total is ₹${checkOut()}`);
+            }
+
+            paymentGateway();
+
+        </script>
+
+    </body>
+
+</html>

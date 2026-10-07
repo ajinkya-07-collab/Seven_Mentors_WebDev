@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            var choice = Number.parseInt(prompt("Please select the option to perform the operation : \n1 : No is an even or odd\n2 : The year is leap year or not\n3 : Check product availability\n4 : Cart contains product or not<br>"))
+
+            switch (choice) {
+                case 1:
+                    let num = 10;
+                    if (num % 0 == 0) {
+                        console.log(`${num} is even number!`);
+                    } else {
+                        console.log(`${num} is odd number!`);
+                    }
+                    break;
+
+                case 2:
+                    let year = 2016;
+                    if (year % 4 == 0) {
+                        console.log(`${year} is leap year!`);
+                    } else {
+                        console.log(`${year} is not leap year!`);
+                    }
+                    break;
+
+                case 3:
+                    let stock = 10;
+                    if (stock == 0) {
+                        console.log(`Product Out of Stock!`);
+                    }
+                    console.log(`Product Stock : ${stock}`);
+                    break;
+
+                case 4:
+                    let cartItem = 0;
+                    if (cartItem == 0) {
+                        console.log(`Cart is Empty!`);
+                    }
+                    console.log(`Cart has product : ${cartItem}`);
+                    break;
+
+                default:
+                    console.log(`Invalid Option !!!`);
+                    break;
+            }
+        </script>
+
+    </body>
+
+</html>

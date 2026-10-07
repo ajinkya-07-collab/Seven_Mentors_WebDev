@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+        <script>
+
+            let pin = "1234";
+            let attempts = 0;
+            let enteredPin;
+
+            let balance = 20000;
+
+            do {
+                enteredPin = Number.parseInt(prompt(`Enter PIN ! (Only Three Attempts)`));
+                attempts++;
+
+                if (enteredPin != pin) {
+                    console.log(`Incorrect PIN ! Attempt remaining : ${3 - attempts}`);
+                }
+            } while (enteredPin != pin && attempts < 3);
+
+            if (enteredPin == pin) {
+                while (balance > 0) {
+                    let withdrawAmount = Number.parseFloat(prompt("Enter Withdrawal Ammount! \nIf u want to terminate the transaction please enter -1(to exit)"));
+                    if (withdrawAmount <= balance) {
+                        if (withdrawAmount % 500 == 0 && withdrawAmount <= 1000) {
+                            balance -= withdrawAmount;
+                            console.log(`Congrats! You have withdrawal Rs.${withdrawAmount}`);
+                            console.log(`Balance Amount : Rs.${balance}`);
+                        }
+                    }
+                    if (withdrawAmount == -1) {
+                        console.log(`Thanks for using my withdrawal service!!`);
+                        break;
+                    }
+                }
+            } else {
+                console.log(`Inccorrect PIN ! Three Attempts Completed ! Account Blocked !`);
+            }
+
+
+
+
+        </script>
+
+        <!-- <script>
+
+            for (let i = 1; i <= 10; i++) {
+                console.log(i);
+            }
+
+            document.writeln("Divisible by 5 and 9 between 200 to 1 : ");
+
+            for (let i = 200; i >= 1; i--) {
+                if (i % 5 == 0 && i % 9 == 0) {
+                    document.write(i + " ");
+                    console.log(i);
+                }
+
+            }
+
+
+            for (let char = 65; char <= 90; char++) {
+                let ch = String.fromCharCode(char);
+                if (ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') {
+                    continue;
+                }
+                else {
+                    console.log(ch);
+                }
+            }
+
+        </script> -->
+    </body>
+
+</html>
