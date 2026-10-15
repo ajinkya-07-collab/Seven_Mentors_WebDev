@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+        <script>
+            //assignment(some()) => find pending orders
+        </script>
+
+        <script>
+            const incident = [
+                { number: 'INC1001', priority: 3, status: 'Open' },
+                { number: 'INC1002', priority: 4, status: 'In-Progress' },
+                { number: 'INC1003', priority: 1, status: 'Open' },
+                { number: 'INC1004', priority: 3, status: 'Open' },
+                { number: 'INC1005', priority: 2, status: 'Closed' },
+                { number: 'INC1006', priority: 1, status: 'Resolved' },
+                { number: 'INC1007', priority: 4, status: 'Open' }
+            ]
+
+            //Find the first high-priority incident
+
+            const indexPriority = incident.findIndex((inc) => inc.priority === 1 && inc.status === 'Open');
+            console.log(indexPriority);
+            if (indexPriority !== -1) {
+                console.log(incident[indexPriority].number);
+            }
+
+            //assignment => find all incident num whose priority is 3 and the status is open
+
+            const incNum = incident.filter((inc) => inc.priority === 3 && inc.status === 'Open').map(inc => inc.number);
+            console.log(incNum);
+
+
+        </script>
+
+        <script>
+
+            const employees = [
+                { id: 101, name: 'Amit', department: 'IT', salary: 24050 },
+                { id: 102, name: 'Ratan', department: 'Account', salary: 35055 },
+                { id: 103, name: 'Sumesh', department: 'IT', salary: 34050 },
+                { id: 104, name: 'Suresh', department: 'Testing', salary: 39050 },
+                { id: 105, name: 'Ajit', department: 'Account', salary: 40050 },
+                { id: 106, name: 'Suman', department: 'Training', salary: 30050 }
+            ];
+
+            //findIndex() passes each element to the callback function, one at a time.
+            //First iteration:
+            // emp = { id: 101, name: 'Amit', department: 'IT' }
+            // emp.id === 101 → true
+            // Returns index 0 and stops searching.
+            // emp → parameter that receives the current employee object.
+            // emp.id → accesses that employee's ID.
+            // === 101 → checks whether the ID is 101.
+
+            //Find Employee's position
+
+            const index = employees.findIndex(employees => employees.id === 105);
+            console.log(index);
+            console.log(employees[index]); // entire record of found index
+
+            const index1 = employees.findIndex(employees => employees.department === "IT");//1st occured element index == 0
+            console.log(index1);
+            console.log(employees[index1]);
+
+            //find all emplyees with It dept
+            const itEmployees = employees.filter((emp) => emp.department === 'IT'); //new array department == 'IT'
+            console.log(itEmployees);
+            console.log(`IT Employee count : ${itEmployees.length}`);
+
+            //assignment => add salary - find employees where sal range between 30k to 40k
+            const salEmp = employees.filter(emp => emp.salary >= 30000 && emp.salary <= 40000).map(emp => ({ id: emp.id, name: emp.name }))
+            console.log(salEmp);
+
+        </script>
+    </body>
+
+</html>
