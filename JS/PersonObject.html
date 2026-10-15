@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            const student = new Object();
+            student.rollNo = 10;
+            student.name = "Tushar Kale";
+            student.email = "tusharkale@gmail.com";
+
+            console.log(`Student RollNo : ${student.rollNo}, name is ${student.name}, email is : ${student.email}`);
+        </script>
+        <script>
+
+            //object
+            const person = {
+
+                id: 101,
+                name: "Amol",
+                address: {
+                    addressLine1: "Flat no 101,Near IBM",
+                    addressLine2: "FC Road",
+                    city: "Pune"
+                },
+                age: 22,
+                skills: ["Java", "HTML", "CSS", "JavaScript"],
+                mobile: 52892452155,
+                email: "amol@gmail.com"
+            };
+
+            //Dynamic property access
+            const field = "address";
+            console.log(person[field]);
+
+            //delete(operator) object properties
+            delete person.mobile;
+            console.log(person);
+
+            //spread operator to copy existing object and update any value aslso
+            const updatePerson = {
+                ...person,
+                hobbies: ["Cricket", "Movies"]
+            }
+
+            console.log(updatePerson);
+
+            console.log(person); // arrnage op by key alphabet
+
+            console.log("Person's Information");
+            console.log(person.id);
+            console.log(person.name);
+            console.log(person.address);
+            console.log(person.address.city);
+            console.log(person.age);
+            console.log(person.skills);
+            console.log("Deleted Above(Mobile) : " + person.mobile);
+            console.log(person.email);
+            console.log("Skill at index 3 : " + person.skills[3]);
+        </script>
+    </body>
+
+</html>

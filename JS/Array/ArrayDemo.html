@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+        <!-- An array is a special object used to store multiple values
+        in a single variable. Values are stored in an ordered
+        sequence and accessed using index numbers. -->
+
+        <script>
+            const players = ["Rutu", "Kartik", "Sanju", "Ayush", "Kartik", "Ms Dhoni"];
+            console.log(players.slice(1, 3));
+            console.log(players.slice(-2));
+            console.log(`Index of Rutu is ${players.indexOf("Rutu")}`);
+
+            //last occurence of element
+            console.log(players.lastIndexOf("Kartik"));
+
+            const searchResult = players.includes("Rohit");
+            console.log(`Search Result : ${searchResult}`);
+
+        </script>
+
+        <script>
+            //Remove Element
+            const cart = ["Laptop", "Tablet", "Mobile", "Keyboard", "Mouse"];
+            console.log(cart);
+            const removeItem = cart.splice(2, 1);//removes Mobile
+            console.log(removeItem);
+            console.log(cart);
+
+            //Add Element
+            cart.splice(3, 0, "TV", "Bike", "Camera", "HeadPhones");
+            // for (const cartItem of cart) {
+            //     console.log(cartItem);
+            // }
+            console.log(cart);
+
+            //update existing value
+            cart.splice(3, 1, "Sony Bravia TV");//replace TV
+            console.log(cart);
+        </script>
+
+        <script>
+            //Add Element => push() add element last
+            //Remove Element => pop() remove last element
+
+            var employee = [101, "Tushar", "Mumbai", 35, 65000, "Developer", 5];
+
+            for (const e1 of employee) {
+                console.log(e1);
+            }
+
+            console.log("After push()");
+
+            employee.push("IT Asset management", 10, "MernStack");
+            for (const e1 of employee) {
+                console.log(e1);
+            }
+
+            console.log("After pop()");
+
+            employee.pop();
+            for (const e1 of employee) {
+                console.log(e1);
+            }
+
+        </script>
+
+        <script>
+            var fruits = new Array("Apple", "Banana"); // using object or constructor
+
+            var person = [1, "Amit", 25, "Male", 25000, "Pune"]; //array literal => recommended
+            console.log(person);
+
+            //for each loop in js for array traversing
+            for (const p of person) {
+                console.log(p);
+            }
+            console.log("Length : " + person.length);
+
+            //update the element
+            console.log("Updated At index 1 Amit => Amit Sharma");
+            person[1] = "Amit Sharma";
+            for (const p of person) {
+                console.log(p);
+            }
+
+
+        </script>
+    </body>
+
+</html>
