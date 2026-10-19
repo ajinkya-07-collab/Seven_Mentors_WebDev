@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+        <script>
+            let products = ['Dell laptop', 'Samsung Mobile', 'MI TV', 'iPhone 18 pro', 'Mouse', 'Keyboard', 'Tablet'];
+            let searchText = prompt('Enter the product that u want to search!!');
+            // let result = products.toString().includes(searchText);
+
+            let result = products.filter(product =>
+                product.toLowerCase().includes(searchText.toLowerCase())
+            );
+
+            if (result.length > 0) {
+                console.log(result);
+            } else {
+                console.log('Product Not found!');
+            }
+
+        </script>
+
+        <script>
+            //assignment : uservalue as email and eamil must have domain gmail.com else show error
+            let email = 'ajinkya@gmail.com';
+            console.log(email.endsWith('@gmail.com'));  
+        </script>
+    </body>
+
+</html>
