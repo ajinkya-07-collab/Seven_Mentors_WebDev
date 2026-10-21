@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+        <script>
+            let date = new Date();
+            console.log(`Current Date & Time is : ${date}`);
+            console.log(`Current Date : ${date.getDay()}:${date.getMonth() + 1}:${date.getFullYear()}`);
+            console.log(`Cuurent Time : ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`);
+        </script>
+
+        <script>
+
+            function calculateExperience(joiningDate, currentDate) {
+                let years = currentDate.getFullYear() - joiningDate.getFullYear();
+
+                let months = currentDate.getMonth() - joiningDate.getMonth();
+
+                if (currentDate.getDate() < joiningDate.getDate()) {
+                    months--;
+                }
+                if (months < 0) {
+                    years--;
+                    months += 12;
+                }
+
+                return ({ years, months });
+            }
+
+            let joiningDate = new Date(2021, 5, 15);
+            let currentdate = new Date(2026, 10, 21);
+
+            console.log(calculateExperience(joiningDate, currentdate));
+        </script>
+
+        <script>
+
+            function calculateAge(dob) {
+
+                let currentDate = new Date();
+
+                let years = currentDate.getFullYear() - dob.getFullYear();
+                let months = currentDate.getMonth() - dob.getMonth();
+                let days = currentDate.getDate() - dob.getDate();
+
+                if (days < 0) {
+                    months--;
+
+                    let previousMonth = new Date(
+                        currentDate.getFullYear(),
+                        currentDate.getMonth(),
+                        0
+                    );
+
+                    days += previousMonth.getDate();
+                }
+
+                if (months < 0) {
+                    years--;
+                    months += 12;
+                }
+
+                console.log(`Age: ${years} Years ${months} Months ${days} Days`);
+            }
+
+            let dob = new Date(2002, 11, 24);
+
+            calculateAge(dob);
+
+        </script>
+    </body>
+
+</html>

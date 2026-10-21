@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+
+            let skills = ["Java", "Javascript", "DotNet", "HTML", "CSS", "TailwindCSS", "SQL"];
+            console.log(skills.toString());
+            console.log(skills.join(" | "));
+
+
+            let speech = "Hello, I am Ajinkya Temak, I am Full Stack Developer";
+            console.log(speech);
+
+            let result = speech.slice(7, 19); //slice() = copy/extract a portion, original remains unchanged.
+            console.log(result);
+
+            let city = "Pune,Mumbai,Satara,Sangli,Nagpur,Latur,Parbhani,Nanded";
+            let arr = city.split(' ');
+            console.log(arr);
+
+            let code = "EE738265";
+            console.log(`Entered code : ${code}`);
+            let reqCode = code.slice(2);
+            console.log(`Required code : ${reqCode}`);
+
+            let email = "ajinkyatemak88@gmail.com";
+            console.log(`Email : ${email}`);
+            let atPosition = email.indexOf('@');
+            if (atPosition !== -1) {
+                let domain = email.slice(atPosition + 1);
+                console.log(`Domain : ${domain}`);
+            } else {
+                console.log("Invalid Email Format !!");
+            }
+
+        </script>
+    </body>
+
+</html>
