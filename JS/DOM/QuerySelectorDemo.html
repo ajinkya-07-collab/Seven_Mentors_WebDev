@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1 id="heading">Welcome to DOM</h1>
+
+    <button id="changeButton" onclick="">ChangeStyle</button>
+    <button id="changeBackground">Change_BK_font</button>
+    <button id="changeHeading">ChangeHeading</button>
+
+    <hr />
+    <!-- .innerText -->
+    <div id="sample">
+      <p>Hello, <span style="display: none"> Amol Kumar </span></p>
+    </div>
+
+    <hr />
+
+    <h1 id="title">DOM Training</h1>
+
+    <p class="info">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum perferendis alias consequatur ab iste earum, incidunt, officiis quod esse tempore ipsam, veritatis libero iusto voluptatem ipsa
+      laborum doloribus explicabo cum?
+    </p>
+
+    <p class="p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis facere facilis voluptatibus veritatis numquam sapiente id consectetur vitae nulla corporis!</p>
+
+    <ul>
+      <li class="skill">HTML</li>
+      <li class="skill">CSS</li>
+      <li class="skill">JavaScript</li>
+      <li class="skill">Java</li>
+      <li class="skill">Spring</li>
+    </ul>
+
+    <div id="container"></div>
+
+    <script src="QuerySelectorDemo.js"></script>
+
+    <script>
+      console.log(document.querySelector("#title").textContent);
+      console.log(document.querySelector(".info").textContent);
+      console.log(document.querySelector(".p").textContent);
+
+      let skills = document.querySelectorAll(".skill");
+
+      console.log(skills.length);
+
+      skills.forEach((element) => {
+        console.log(element.textContent);
+      });
+    </script>
+  </body>
+</html>
