@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            .product-card {
+                width: 280px;
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                transition: background-color 0.4s;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <label for="feedback">Write Feedback</label><br>
+        <textarea name="feedback"
+                  id="feedback"
+                  maxlength="100"></textarea>
+        <p><span id="count">0</span>/100</p>
+
+        <hr>
+        <div id="product"
+             class="product-card">
+            <h2>Laptop</h2>
+            <h5>Price : ₹50000</h5>
+            <p id="status">On Stock</p>
+        </div>
+
+        <hr>
+
+        <label for="username">Username</label>
+        <input id="username"
+               type="text">
+        <h4 id="result"></h4>
+
+        <script>
+            const product = document.getElementById("product");
+            const status = document.getElementById('status');
+
+            const username = document.getElementById("username");
+            const result = document.getElementById("result");
+
+            product.addEventListener("mouseenter", () => {
+                product.style.backgroundColor = "lightblue";
+                status.textContent = "Product Selected";
+            });
+
+            product.addEventListener("mouseleave", () => {
+                product.style.backgroundColor = "white";
+                status.textContent = "On Stock";
+            });
+
+            let keys = [];
+
+            username.addEventListener("keydown", (event) => {
+                keys.push(event.key);
+                result.textContent = "You Pressed : " + keys;
+            });
+
+            const feedback = document.getElementById("feedback");
+            const count = document.getElementById("count");
+
+            feedback.addEventListener("input", () => {
+                count.textContent = feedback.value.length;
+            });
+
+            //assignmrnt 2 input fiedls enter nums , addition in div(h4) when button click
+        </script>
+    </body>
+
+</html>
