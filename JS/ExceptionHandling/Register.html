@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Registration</title>
+  </head>
+
+  <body>
+    <div>
+      <label for="username">Username</label>
+      <input type="text" id="username" placeholder="Enter Username" />
+
+      <br />
+      <small id="usernameError"></small>
+    </div>
+
+    <br />
+
+    <div>
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter Email" />
+
+      <br />
+      <small id="emailError"></small>
+    </div>
+
+    <br />
+
+    <div>
+      <label for="mobile">Mobile No</label>
+      <input type="tel" id="mobile" placeholder="Enter Mobile No" />
+
+      <br />
+      <small id="mobileError"></small>
+    </div>
+
+    <br />
+
+    <div>
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter Password" />
+
+      <br />
+      <small id="passwordError"></small>
+    </div>
+
+    <br />
+
+    <button id="btnSubmit">Register</button>
+
+    <h4 id="success"></h4>
+
+    <script>
+      const username = document.getElementById("username");
+      const email = document.getElementById("email");
+      const mobile = document.getElementById("mobile");
+      const password = document.getElementById("password");
+
+      const usernameError = document.getElementById("usernameError");
+      const emailError = document.getElementById("emailError");
+      const mobileError = document.getElementById("mobileError");
+      const passwordError = document.getElementById("passwordError");
+
+      const button = document.getElementById("btnSubmit");
+      const success = document.getElementById("success");
+
+      button.addEventListener("click", () => {
+        try {
+          // Clear previous messages
+
+          usernameError.textContent = "";
+          emailError.textContent = "";
+          mobileError.textContent = "";
+          passwordError.textContent = "";
+
+          success.textContent = "";
+
+          if (username.value.trim() === "") {
+            username.style.border = "1px solid red";
+            username.style.borderRadius = "6px";
+
+            usernameError.textContent = "Username field is empty";
+            usernameError.style.color = "red";
+          } else {
+            username.style.border = "1px solid green";
+            username.style.borderRadius = "6px";
+          }
+
+          if (email.value.trim() === "") {
+            email.style.border = "1px solid red";
+            email.style.borderRadius = "6px";
+
+            emailError.textContent = "Email field is empty";
+            emailError.style.color = "red";
+          } else {
+            email.style.border = "1px solid green";
+            email.style.borderRadius = "6px";
+          }
+
+          if (mobile.value.trim() === "") {
+            mobile.style.border = "1px solid red";
+            mobile.style.borderRadius = "6px";
+
+            mobileError.textContent = "Mobile field is empty";
+            mobileError.style.color = "red";
+          } else {
+            mobile.style.border = "1px solid green";
+            mobile.style.borderRadius = "6px";
+          }
+
+          if (password.value.trim() === "") {
+            password.style.border = "1px solid red";
+            password.style.borderRadius = "6px";
+
+            passwordError.textContent = "Password field is empty";
+            passwordError.style.color = "red";
+          } else {
+            password.style.border = "1px solid green";
+            password.style.borderRadius = "6px";
+          }
+
+          // Check after validating ALL fields
+
+          if (username.value.trim() === "" || email.value.trim() === "" || mobile.value.trim() === "" || password.value.trim() === "") {
+            throw new Error("Registration Failed");
+          }
+
+          success.textContent = "Registration Successful!";
+          success.style.color = "green";
+        } catch (error) {
+          success.textContent = error.message;
+          success.style.color = "red";
+        } finally {
+          console.log("Registration validation completed");
+        }
+      });
+    </script>
+  </body>
+</html>

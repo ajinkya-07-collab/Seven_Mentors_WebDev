@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div>
+      <label for="username">username</label>
+      <input type="text" id="username" placeholder="Enter Username" />
+      <br /><br />
+      <label for="password">password</label>
+      <input type="password" id="password" placeholder="Enter password" />
+      <br /><br />
+      <button id="btnLogin">Login</button>
+      <br />
+      <h4 id="success"></h4>
+      <h5 id="finalMessage"></h5>
+    </div>
+
+    <script>
+      const username = document.getElementById("username");
+      const password = document.getElementById("password");
+      const button = document.getElementById("btnLogin");
+      const success = document.getElementById("success");
+      const finalMessage = document.getElementById("finalMessage");
+
+      button.addEventListener("click", () => {
+        try {
+          if (username.value !== "ajinkya@gmail.com") {
+            throw new Error("Invalid Username !!");
+          }
+          if (password.value !== "test@123") {
+            throw new Error("Invalid Password!!");
+          }
+          console.log("Login Successfull!!");
+          success.textContent = "Login SuccessFull!!";
+          success.style.color = "green";
+        } catch (error) {
+          console.log(error.message);
+          success.style.color = "red";
+          success.textContent = "Login Failed";
+        } finally {
+          finalMessage.style.color = "green";
+          finalMessage.textContent = "Thanks for using our Service!!";
+        }
+      });
+    </script>
+  </body>
+</html>
