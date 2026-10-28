@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const pattern = /welcome/;
+      const text = "Welcome to Javascript Session";
+
+      console.log(pattern.test(text));
+    </script>
+
+    <script>
+      const mytext = "Order 101, Order 102,Order 103,Order 104,Order 105";
+
+      console.log(mytext.match(/\d+/g));
+
+      const myProductPrice = "MRP ₹2500,MRP ₹8500,MRP ₹300,MRP ₹458,MRP ₹4600,";
+      console.log(myProductPrice.match(/₹\d+/g));
+
+      const pattern1 = /javascript/i; //i = case insensitive flag
+      console.log(pattern1.test("Javascript is the Lanuage"));
+
+      const animals = "cat dog cat bird cat dog";
+      console.log(animals.match(/cat/));
+      console.log(animals.match(/cat/g));
+    </script>
+
+    <script>
+      const text1 = "Employee ID EMP12345";
+      console.log(text1.match(/\d+/g));
+      console.log(text1.match(/\d/g));
+
+      const text2 = "I have 20 assignments of JavaScript, but I didn't complete!";
+      console.log(text2.match(/\D+/g));
+    </script>
+
+    <script>
+      const x = /^[A-Z][a-z]+_[a-z]+$/; //all names
+
+      console.log(x.test("Amol_kale"));
+
+      const y = /^[A-Z]+\s[a-z]+$/;
+      console.log(y.test("AMOL kale"));
+    </script>
+  </body>
+</html>
