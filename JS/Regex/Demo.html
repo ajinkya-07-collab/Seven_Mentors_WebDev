@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const pattern2 = /^[A-Za-z0-9!@#$^&*]{6}/;
+      console.log(pattern2.test("1234As"));
+    </script>
+
+    <script>
+      //masking
+      const accNumber = "12785343857583575";
+      const masked = accNumber.replace(/\d(?=\d{4})/g, "*");
+      console.log(`Account Number : ${masked}`);
+    </script>
+
+    <script>
+      //email format
+      const emailPattern = /^[\S]+@[\S]+.[\S]+$/;
+      console.log(emailPattern.test("ajinkya@gmail.com"));
+
+      //mobile number
+      const mobile = /^[6-9]\d{9}/;
+      console.log(mobile.test("9875342762"));
+
+      //password
+      const password = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,15}$/;
+      console.log(password.test("Test@123"));
+    </script>
+  </body>
+</html>

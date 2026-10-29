@@ -1,0 +1,275 @@
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration Form Validation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="min-h-screen bg-slate-100 px-4 py-10 text-slate-800">
+    <main class="mx-auto max-w-xl rounded-2xl bg-white p-6 shadow-lg sm:p-8">
+      <div class="mb-6">
+        <p class="text-sm font-semibold uppercase tracking-wider text-blue-500">
+          Seven Mentor's Hackethon 2026
+        </p>
+        <h1 class="mt-2 text-3xl font-bold">Student Registration</h1>
+        <p class="mt-2 text-slate-500">Be ready after diwali...</p>
+      </div>
+
+      <form class="space-y-5" id="registrationForm" novalidate>
+        <!-- Full Name -->
+        <div>
+          <label for="name" class="mb-1 block font-medium">Full Name</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter name"
+            autocomplete="name"
+            class="w-full rounded-lg border border-slate-300 p-3 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100" />
+          <small id="nameError" class="mt-1 block text-sm text-red-600"></small>
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label for="email" class="mb-1 block font-medium">Email</label>
+          <input
+            type="text"
+            id="email"
+            placeholder="Enter Email"
+            autocomplete="email"
+            class="w-full rounded-lg border border-slate-300 p-3 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100" />
+          <small id="emailError" class="mt-1 block text-sm text-red-600"></small>
+        </div>
+
+        <!-- Mobile Number -->
+        <div>
+          <label for="phone" class="mb-1 block font-medium">Mobile Number</label>
+          <input
+            type="text"
+            id="phone"
+            placeholder="Enter phone no"
+            autocomplete="tel"
+            class="w-full rounded-lg border border-slate-300 p-3 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100" />
+          <small id="phoneError" class="mt-1 block text-sm text-red-600"></small>
+        </div>
+
+        <!-- Password -->
+        <div>
+          <label for="password" class="mb-1 block font-medium">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Create a strong password"
+            autocomplete="new-password"
+            class="w-full rounded-lg border border-slate-300 p-3 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100" />
+          <small id="passwordError" class="mt-1 block text-sm text-red-600"></small>
+
+          <!-- Password Rules -->
+          <ul class="mt-3 space-y-1 text-sm">
+            <li id="ruleLength" class="text-red-600">✗ At least 8 characters</li>
+            <li id="ruleUpper" class="text-red-600">✗ At least one uppercase alphabet</li>
+            <li id="ruleLower" class="text-red-600">✗ At least one lowercase alphabet</li>
+            <li id="ruleDigit" class="text-red-600">✗ At least one number digit</li>
+            <li id="ruleSpecial" class="text-red-600">✗ At least one special character</li>
+          </ul>
+        </div>
+
+        <!-- Submit -->
+        <button
+          id="submitButton"
+          type="submit"
+          class="w-full rounded-lg bg-blue-600 p-3 font-semibold text-white hover:bg-blue-700">
+          Register Student
+        </button>
+
+        <!-- Final Message -->
+        <div
+          id="message"
+          role="status"
+          aria-live="polite"
+          class="hidden rounded-lg p-4 text-sm"></div>
+      </form>
+    </main>
+
+    <script>
+      // DOM elements
+      const form = document.getElementById("registrationForm");
+
+      const name = document.getElementById("name");
+      const email = document.getElementById("email");
+      const phone = document.getElementById("phone");
+      const password = document.getElementById("password");
+
+      const nameError = document.getElementById("nameError");
+      const emailError = document.getElementById("emailError");
+      const phoneError = document.getElementById("phoneError");
+      const passwordError = document.getElementById("passwordError");
+      const message = document.getElementById("message");
+
+      // Regular expressions
+      const namePattern = /^[A-Za-z]+(?: [A-Za-z]+)*$/;
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const phonePattern = /^[6-9]\d{9}$/;
+
+      // Password rules
+      const lengthPattern = /^.{8,}$/;
+      const upperPattern = /[A-Z]/;
+      const lowerPattern = /[a-z]/;
+      const digitPattern = /[0-9]/;
+      const specialPattern = /[!@#$%^&*]/;
+
+      // Password rule elements
+      const ruleLength = document.getElementById("ruleLength");
+      const ruleUpper = document.getElementById("ruleUpper");
+      const ruleLower = document.getElementById("ruleLower");
+      const ruleDigit = document.getElementById("ruleDigit");
+      const ruleSpecial = document.getElementById("ruleSpecial");
+
+      // Display error or success state for a field
+      function showError(input, errorElement, errorText) {
+        errorElement.textContent = errorText;
+
+        input.classList.toggle("border-red-500", errorText !== "");
+        input.classList.toggle("border-green-500", errorText === "");
+      }
+
+      // Full Name validation
+      function validateName() {
+        const value = name.value.trim();
+
+        if (value === "") {
+          showError(name, nameError, "Name is required");
+          return false;
+        }
+
+        if (!namePattern.test(value)) {
+          showError(name, nameError, "Enter a valid name using letters and spaces only");
+          return false;
+        }
+
+        showError(name, nameError, "");
+        return true;
+      }
+
+      // Email validation
+      function validateEmail() {
+        const value = email.value.trim();
+
+        if (value === "") {
+          showError(email, emailError, "Email is required");
+          return false;
+        }
+
+        if (!emailPattern.test(value)) {
+          showError(email, emailError, "Enter a valid email address");
+          return false;
+        }
+
+        showError(email, emailError, "");
+        return true;
+      }
+
+      // Mobile number validation
+      function validatePhone() {
+        const value = phone.value.trim();
+
+        if (value === "") {
+          showError(phone, phoneError, "Mobile number is required");
+          return false;
+        }
+
+        if (!phonePattern.test(value)) {
+          showError(phone, phoneError, "Enter a valid 10-digit Indian mobile number");
+          return false;
+        }
+
+        showError(phone, phoneError, "");
+        return true;
+      }
+
+      // Update password rule color and symbol
+      function updateRule(element, isValid, ruleText) {
+        element.textContent = (isValid ? "✓ " : "✗ ") + ruleText;
+
+        element.classList.toggle("text-green-600", isValid);
+        element.classList.toggle("text-red-600", !isValid);
+      }
+
+      // Password validation
+      function validatePassword() {
+        const value = password.value;
+
+        const hasLength = lengthPattern.test(value);
+        const hasUpper = upperPattern.test(value);
+        const hasLower = lowerPattern.test(value);
+        const hasDigit = digitPattern.test(value);
+        const hasSpecial = specialPattern.test(value);
+
+        // Update password rules live
+        updateRule(ruleLength, hasLength, "At least 8 characters");
+        updateRule(ruleUpper, hasUpper, "At least one uppercase alphabet");
+        updateRule(ruleLower, hasLower, "At least one lowercase alphabet");
+        updateRule(ruleDigit, hasDigit, "At least one number digit");
+        updateRule(ruleSpecial, hasSpecial, "At least one special character");
+
+        if (value === "") {
+          showError(password, passwordError, "Password is required");
+          return false;
+        }
+
+        if (!hasLength || !hasUpper || !hasLower || !hasDigit || !hasSpecial) {
+          showError(password, passwordError, "Please satisfy all password requirements");
+          return false;
+        }
+
+        showError(password, passwordError, "");
+        return true;
+      }
+
+      // Validate fields while typing
+      name.addEventListener("input", validateName);
+      email.addEventListener("input", validateEmail);
+      phone.addEventListener("input", validatePhone);
+      password.addEventListener("input", validatePassword);
+
+      // Form submission
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const isNameValid = validateName();
+        const isEmailValid = validateEmail();
+        const isPhoneValid = validatePhone();
+        const isPasswordValid = validatePassword();
+
+        if (isNameValid && isEmailValid && isPhoneValid && isPasswordValid) {
+          message.textContent = "Registration successful!";
+          message.className = "rounded-lg bg-green-100 p-4 text-sm text-green-700";
+
+          form.reset();
+
+          // Reset password rules to red after successful submission
+          updateRule(ruleLength, false, "At least 8 characters");
+          updateRule(ruleUpper, false, "At least one uppercase alphabet");
+          updateRule(ruleLower, false, "At least one lowercase alphabet");
+          updateRule(ruleDigit, false, "At least one number digit");
+          updateRule(ruleSpecial, false, "At least one special character");
+
+          // Clear field borders and messages after reset
+          [name, email, phone, password].forEach(function (input) {
+            input.classList.remove("border-red-500", "border-green-500");
+          });
+
+          [nameError, emailError, phoneError, passwordError].forEach(function (error) {
+            error.textContent = "";
+          });
+        } else {
+          message.textContent = "Please correct the errors before submitting.";
+          message.className = "rounded-lg bg-red-100 p-4 text-sm text-red-700";
+        }
+      });
+    </script>
+  </body>
+</html>
+```
