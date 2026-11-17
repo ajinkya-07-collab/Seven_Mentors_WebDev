@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const prices = [254, 2698, 987, 4546, 321, 120, 3284, 124];
+      const updatedPrices = [];
+      for (let index = 0; index < prices.length; index++) {
+        updatedPrices.push(prices[index] * 1.1);
+      }
+      console.log(updatedPrices);
+
+      const discountPrice = updatedPrices.map((price) => {
+        return price * 0.95;
+      });
+      console.log(discountPrice);
+
+      const names = ["amol", "rahul", "rohit"];
+
+      const result = names.map((name) => {
+        return name.toUpperCase();
+      });
+
+      console.log("Names : " + result);
+    </script>
+
+    <script>
+      const products = [
+        { id: 1, name: "Mobile", price: 23400 },
+        { id: 2, name: "Laptop", price: 20000 },
+        { id: 3, name: "Tablet", price: 43400 },
+        { id: 4, name: "TV", price: 55555 },
+      ];
+
+      const productDetails = products.map((product) => {
+        return { name: product.name, price: product.price };
+      });
+
+      //const productDetailes1 = products.map((price) => products.name + " -> " + products.price);
+
+      console.log(productDetails);
+      //console.log(productDetailes1);
+
+      const productDetailed = products.find((product) => {
+        return product.id == 1;
+      });
+
+      if (productDetailed) {
+        console.log("Product Details:", {
+          name: productDetailed.name,
+          price: productDetailed.price,
+        });
+      } else {
+        console.log("Product Not Found!");
+      }
+    </script>
+
+    <script>
+      const productCard = products
+        .map((product) => {
+          return `
+        <div>
+          <h3>${product.name}</h3>
+          <h4>${product.price}</h4>
+        </div>
+        `;
+        })
+        .join("");
+
+      document.writeln(productCard);
+    </script>
+  </body>
+</html>
